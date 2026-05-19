@@ -1,6 +1,6 @@
 ---
-title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
-description: "Meta description for the page"
+title: "Skyline Digital Solutions | Glendale, AZ"
+description: "Skyline Digital Solutions builds modern, professional websites for businesses that want to improve their online presence, build trust, and attract more customers."
 permalink: "/"
 tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
 ---
@@ -13,7 +13,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
     <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
     {% if client.isProduction %}
-        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <!-- <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
         <noscript>
             <link rel="stylesheet" href="/assets/css/local.css">
         </noscript>
@@ -33,430 +33,591 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <!--                    Hero                      -->
     <!-- ============================================ -->
 
-    <section id="hero-143">
+    <section id="hero-1350">
         <div class="cs-container">
-            <span class="cs-topper">CodeStitch Presents</span>
-            <h1 class="cs-title">
-                The Intermediate Website Kit (SASS)
-            </h1>
-            <p class="cs-text">
-                Building faster websites, faster. Just clone, update _data/client.js, swap out some sections, and away you go!
-            </p>
-            <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+            <div class="cs-content">
+                
+                <h1 class="cs-title">Small Business Web Design & Development</h1>
+                <p class="cs-text">
+                Skyline Digital Solutions creates clean, modern, mobile-friendly websites for small businesses, local brands, and service providers who need a stronger online presence.
+                            </p>
+                <span class="cs-topper">Custom websites. Clear pricing. Professional design. Built for business credibility.</span>
+                <a href="/pricing" class="cs-button-solid">View Pricing</a>
+            </div>
         </div>
-
-        <!-- Background Image -->
+        <!--Bubble Groups-->
+        <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
+        <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
+        <!-- Background Image, background image added in the css at 1600px for parallax effect -->
         <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract-m.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg" alt="abstract background" width="2250" height="1500" aria-hidden="true">
         </picture>
     </section>
+               
 
-    <!-- ============================================ -->
-    <!--                   Services                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
 
-    <section id="h-services-143">
+<section id="sbsr-1363">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/phone-site.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/phone-site.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/phone-site.jpg" alt="people" width="605868" height="690">
+            </picture>
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/gear-white.svg" alt="people" width="60" height="60">
+                <span class="cs-desc">
+                    Simple Websites, Strong First Impressions.
+                </span>
+            </div>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Designed With Purpose</span>
+            <h2 class="cs-title">The Cost of Not Having a Website</h2>
+            <p class="cs-text">
+                When someone looks up your business, your website is often the first serious impression they get. An outdated, confusing, or missing website can make people hesitate before they ever call, book, or request a quote.
+            </p>
+            <p>
+                Skyline Digital Solutions builds websites that are clean, organized, mobile-friendly, and designed to help customers understand your business quickly.
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trophy.svg" alt="icon" width="32" height="32">
+                        Trust
+                    </h3>
+                    <p class="cs-item-text">
+                        Your website should make customers feel confident that your business is professional, credible, and worth contacting.                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="icon" width="32" height="32">
+                         Reliability
+                    </h3>
+                    <p class="cs-item-text">
+                        Your website should show visitors that your business is organized, dependable, and ready to help.
+                    </p>
+                </li>
+            </ul>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                    Trust & Professionalism
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                    Clear Information
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                    Easy Contact
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+                    Increased Customer Confidence
+                </li>
+            </ul>
+            <a href="/about" class="cs-button-solid">Discover More</a>
+        </div>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1378">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">A Better Website for a Better First Impression</h2>
+            <p class="cs-text">First impressions matter. We design websites that make your business look established, reliable, and easy to trust from the moment someone lands on your page.</p>
+        </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-layers.svg" alt="icon" width="48" height="48">
                 </picture>
-                <h2 class="cs-title">
-                    Full Kitchen Remodel
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <h3 class="cs-h3">Fully Customized Website Design</h3>
+                <p class="cs-item-text">A unique website design built around your business, brand, services, and goals.</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-media.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Fully CustomizedWebsite Development</h3>
+                <p class="cs-item-text">A complete professional website built to help your business look credible and attract customers online.</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-alert.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Fully Responsive Mobile-First Design</h3>
+                <p class="cs-item-text">A website designed to look clean, load properly, and work smoothly on phones, tablets, and desktops.</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-meter.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Website Maintenance</h3>
+                <p class="cs-item-text">Ongoing updates, edits, fixes, and support to keep your website fresh and running properly.</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-design.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Website Content Setup</h3>
+                <p class="cs-item-text">Professional content creation and setup for your website to ensure it effectively communicates your message and engages visitors.</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-image.svg" alt="icon" width="48" height="48">
+                </picture>
+                <h3 class="cs-h3">Domain & Hosting Setup</h3>
+                <p class="cs-item-text">Professional domain registration and hosting setup to ensure your website is accessible and performs well.</p>
+                <a href="/" class="cs-link">
+                    <img class="cs-arrow" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                        alt="arrow" width="413" height="374" aria-hidden="true">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                 Why Choose                   -->
+<!-- ============================================ -->
+
+<section id="why-choose-1371">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Why Businesses Choose Skyline Digital Solutions</h2>
+            <p class="cs-text">
+                We build professional websites that help businesses look credible, communicate clearly, and create a stronger online presence. Every site is designed to make your services easy to understand, your business easier to trust, and your customers more likely to take the next step.
+            </p>
+            <p class="cs-text">
+                <strong>With a focus on trust, reliability, and performance, your website is built to support your business long after it goes live.</strong>
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why1.svg" alt="icon" width="24" height="24">
+                    Professional Website Design
+                </h3>
+                <p class="cs-item-text">
+                    We create clean, modern websites that help your business make a strong and credible first impression.
                 </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Exterior Repairs
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why2.svg" alt="icon" width="24" height="24">
+                    Business-Focused Approach
+                </h3>
+                <p class="cs-item-text">
+                    Every website is built around your goals, services, brand, and the customers you want to reach.
                 </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why3.svg" alt="icon" width="24" height="24">
+                    Mobile-First Development
+                </h3>
+                <p class="cs-item-text">
+                    We design and develop websites that perform exceptionally well on all devices, starting with a mobile-first approach.
+                </p>
+            </li>
+            <li class="cs-item-picture">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/business-owner.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/business-owner.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/business-owner.jpg" alt="business owner" width="590" height="418">
                 </picture>
-                <h2 class="cs-title">
-                    Utility Maintenance
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why4.svg" alt="icon" width="24" height="24">
+                    Clear User Experience
+                </h3>
+                <p class="cs-item-text">
+                    We structure your pages, content, and navigation so visitors can quickly understand your business and take action.
                 </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Design Consultation
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why5.svg" alt="icon" width="24" height="24">
+                    Lead-Ready Website Structure
+                </h3>
+                <p class="cs-item-text">
+                    Your website includes clear calls-to-action, contact options, and service-focused sections designed to support customer inquiries.
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/why6.svg" alt="icon" width="24" height="24">
+                    Reliable Ongoing Support
+                </h3>
+                <p class="cs-item-text">
+                    We provide ongoing website maintenance, updates, edits, and support to ensure your website continues to perform well and meet your needs.
                 </p>
             </li>
         </ul>
-    </section>
+        <a href="/pricing" class="cs-button-solid">Get Started</a>
+    </div>
+    <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
+    <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
+</section>
+                                
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    Steps                     -->
+<!-- ============================================ -->
 
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">
-                    About Stitch Law
-                </h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/about/" class="cs-button-solid">About Us</a>
-            </div>
+<section id="steps-1376">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Process</span>
+            <h2 class="cs-title">A Simple Process From Start to Launch</h2>
         </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--             Side By Side Reverse             -->
-    <!-- ============================================ -->
-
-    <section id="RPsbsr-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">
-                    About Stitch Law
-                </h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <a href="/about/" class="cs-button-solid">About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery-48">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Portfolio</span>
-                <h2 class="cs-title">
-                    Et orci volutpat, back up generator installations
-                </h2>
-            </div>
-            <div class="cs-image-group">
-                <div class="cs-row cs-row-1">
-                    <!-- Row 1-->
-                    <picture class="cs-picture cs-picture-1">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 182, height: 250 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 182, height: 250 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 182, height: 250 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 634, height: 798 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 634, height: 798 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 634, height: 798 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | jpeg %}" alt="new hallway" width="413" height="567" loading="lazy" decoding="async">
+        <!--
+            We had to use a div here because of the grouping we had to do to make the staggerd design work. We needed to create two groups, one with 3 cards and one with 2 cards so we can arrange the cards separately to create the design we need to create. 
+        -->
+        <div class="cs-card-group">
+            <div class="cs-group1">
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step1.svg" alt="icon"
+                            width="48" height="48"/>
                     </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="new home construction" width="413" height="629" loading="lazy" decoding="async">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 182, height: 226 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 182, height: 226 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 182, height: 226 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 634, height: 720 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 634, height: 720 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 634, height: 720 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <picture class="cs-picture cs-picture-1">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 182, height: 216 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 182, height: 216 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 182, height: 216 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 634, height: 692 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 634, height: 692 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 634, height: 692 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | jpeg %}" alt="new kitchen" width="413" height="492" loading="lazy" decoding="async">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 182, height: 228 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 182, height: 228 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 182, height: 228 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 634, height: 728 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 634, height: 728 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 634, height: 728 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | jpeg %}" alt="apartment addition" width="413" height="517" loading="lazy" decoding="async">
-                    </picture>
-
-                    <picture class="cs-picture cs-picture-3">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="kew kitchen cabinets" width="413" height="629" loading="lazy" decoding="async">
-                    </picture>
-
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <picture class="cs-picture cs-picture-1">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 634, height: 880 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 634, height: 880 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 634, height: 880 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | jpeg %}" alt="new black window structure" width="413" height="625" loading="lazy" decoding="async">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 182, height: 198 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 182, height: 198 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 182, height: 198 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 634, height: 636 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 634, height: 636 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 634, height: 636 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | jpeg %}" alt="kitchen rebovation" width="413" height="452" loading="lazy" decoding="async">
-                    </picture>
-
-                    <picture class="cs-picture cs-picture-3">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                        <!--Tablet Image-->
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
-                        <!--Desktop Image-->
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="bathroom renovation" width="413" height="629" loading="lazy" decoding="async">
-                    </picture>
-
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-            </div>
-            <a href="/project-one/" class="cs-button-solid">View a Project</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews-67">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Reviews</span>
-                <h2 class="cs-title">
-                    Words From Our Customers
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-                </p>
-            </div>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
+                    <h3 class="cs-h3">Complete the Project Questionnaire</h3>
                     <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
+                        Tell us about your business, goals, services, design preferences, and what you need from your website.
                     </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
+                </div>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step2.svg" alt="icon" width="32"
+                            height="32"/>
+                    </picture>
+                    <h3 class="cs-h3">Agreement, Project Approval & Initial Payment</h3>
                     <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
+                        We'll finalize the agreement, get your approval, and process your initial payment.
                     </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-            </ul>
-            <a href="/reviews/" class="cs-button-solid">Read All Reviews</a>
+                </div>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step3.svg" alt="icon" width="32"
+                            height="32"/>
+                    </picture>
+                    <h3 class="cs-h3">Review, Approval & Launch</h3>
+                    <p class="cs-item-text">
+                        We'll review the website together, get your approval, and launch your new site.
+                    </p>
+                </div>
+            </div>
+            <div class="cs-group2">
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step4.svg" alt="icon" width="32"
+                            height="32"/>
+                    </picture>
+                    <h3 class="cs-h3">Discovery Call</h3>
+                    <p class="cs-item-text">
+                        We review your answers, discuss your project in more detail, and make sure the website direction is clear.
+                    </p>
+                </div>
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/step3.svg" alt="icon" width="32"
+                            height="32"/>
+                    </picture>
+                    <h3 class="cs-h3">Design & Development Phase</h3>
+                    <p class="cs-item-text">
+                        We design and build your website with a professional layout, mobile-friendly structure, and clear calls-to-action.  
+                   </p>
+                </div>
+            </div>
+            <picture class="cs-waves">
+                <!--Mobile Image-->
+                <source media="(max-width: 1023px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-tablet.svg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 1024px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-desktop.svg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/wave-desktop.svg" alt="wave" width="1280" height="568">
+            </picture>
         </div>
-    </section>
+    </div>
+</section>
+                                
+
+             
+
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
+
+<section id="pricing-356">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Pricing</span>
+            <h2 class="cs-title">Professional Website Plans Made Simple</h2>
+            <p class="cs-text">
+                Our monthly website plans give your business a clean, modern website with ongoing support, updates, and maintenance included — all for one predictable monthly price.            </p>
+            <div class="cs-toggle-group">
+                <span id="cs-option1-356" class="cs-plan">Monthly</span>
+                <div class="cs-toggle" aria-label="click to switch plans pricing">
+                    <span aria-hidden="true" class="cs-toggle-switch"></span>
+                </div>
+                <span id="cs-option2-356" class="cs-plan">Yearly</span>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <!-- Option 1 -->
+            <li class="cs-item">
+                <h3 class="cs-h3">Starter</h3>
+                <p class="cs-item-text">
+                    For businesses that need a simple, professional website to establish their online presence.
+                </p>
+                <div class="cs-option-group">
+                    <span class="cs-price cs-option1-text">$199<span class="cs-small">/month</span></span>
+                    <span class="cs-price cs-option2-text">$1,999<span class="cs-small">/year</span></span>
+                </div>
+                <span class="cs-included">Plan Includes</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        3 Pages (Home, About, Contact) Or Any 3 Pages Of Your Choice
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        1 Edit Per Month
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Fully Customized Website Design + Development
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Fully Responsive Mobile-First Design
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Website Content Setup
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Website Maintenance
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Domain & Hosting Setup
+                    </li>
+                </ul>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSezrXsuNjyM55GeNoKtKiDFkqUmuYg-H5ijXyyY-9Xl-idZ-Q/viewform?usp=header" target="_blank" class="cs-button-solid">Start Now</a>
+            </li>
+            <!-- Option 2 -->
+            <li class="cs-item cs-popular">
+                <h3 class="cs-h3">Professional</h3>
+                <p class="cs-item-text">
+                    For businesses that need a complete website with more room to explain their services and build trust.
+                </p>
+                <div class="cs-option-group">
+                    <span class="cs-price cs-option1-text">$299<span class="cs-small">/month</span></span>
+                    <span class="cs-price cs-option2-text">$2,999<span class="cs-small">/year</span></span>
+                </div>
+                <span class="cs-included">Plan Includes</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        5 Pages (Home, About, Services, Pricing, Contact) Or Any 5+ Pages Of Your Choice
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        3 Edits Per Month
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Fully Customized Website Design + Development
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Fully Responsive Mobile-First Design
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Website Content Setup
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Website Maintenance
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Domain & Hosting Setup
+                    </li>
+                </ul>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSezrXsuNjyM55GeNoKtKiDFkqUmuYg-H5ijXyyY-9Xl-idZ-Q/viewform?usp=header" target="_blank" class="cs-button-solid">Start Now</a>
+            </li>
+            <!-- Option 3 -->
+            <li class="cs-item">
+                <h3 class="cs-h3">Premium</h3>
+                <p class="cs-item-text">
+                    For businesses that want more ongoing support, updates, and flexibility each month.
+                </p>
+                <div class="cs-option-group">
+                    <span class="cs-price cs-option1-text">$399<span class="cs-small">/month</span></span>
+                    <span class="cs-price cs-option2-text">$3,999<span class="cs-small">/year</span></span>
+                </div>
+                <span class="cs-included">Plan Includes</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        5 Pages(Home, About, Services, Pricing, Contact) Or Any 5+ Pages Of Your Choice
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        10 Edits Per Month
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Fully Customized Website Design + Development
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Fully Responsive Mobile-First Design
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Website Content Setup
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Website Maintenance
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Pricing/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Domain & Hosting Setup
+                    </li>
+                </ul>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSezrXsuNjyM55GeNoKtKiDFkqUmuYg-H5ijXyyY-9Xl-idZ-Q/viewform?usp=header" target="_blank" class="cs-button-solid">Start Now</a>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+<script>
+    const toggle = document.querySelector("#pricing-356 .cs-toggle");
+        const option1 = document.querySelector("#pricing-356 .cs-toggle-group #cs-option1-356");
+        const option2 = document.querySelector("#pricing-356 .cs-toggle-group #cs-option2-356");
+        const optionGroup = Array.from(document.querySelectorAll('.cs-option-group'))
+
+        toggle.addEventListener('click', (e) => { 
+            for (const item of optionGroup) {
+                item.classList.toggle("option2-active");
+            }
+            toggle.classList.toggle("active");
+        });
+        option1.addEventListener('click', (e) => { 
+            for (const item of optionGroup) {
+                item.classList.remove("option2-active");
+            }
+            toggle.classList.remove("active");
+        });
+        option2.addEventListener('click', (e) => { 
+            for (const item of optionGroup) {
+                item.classList.add("option2-active");
+            }
+            toggle.classList.add("active");
+        });
+                                
+</script>
+
+<!-- ============================================ -->
+<!--                  Content                     -->
+<!-- ============================================ -->
+
+<section id="content-1450">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">Questions Before Starting?</h2>
+            <p class="cs-text">
+                We understand that you may have questions before starting your website project. Here are some of the most common questions we receive from our clients. If you have any other questions or concerns, please don't hesitate to contact us directly.
+            </p>
+            <a href="/faq" class="cs-button-solid">Read Our FAQ</a>
+        </div>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                Call To Action                -->
+<!-- ============================================ -->
+
+<section id="cta-2443">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Ready To Start?</h2>
+            <div class="cs-flex">
+                <p class="cs-text">
+                 Get a professional website built to help your business look credible, showcase your services, and make it easier for customers to contact you.
+                </p>
+                <a href="/pricing" class="cs-button-solid">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg" alt="tattoo face" width="1280" height="568">
+    </picture>
+</section>
+                                
 
     {% include 'sections/cta.html' %}
 {% endblock %}

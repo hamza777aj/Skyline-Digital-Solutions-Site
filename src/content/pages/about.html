@@ -1,6 +1,6 @@
 ---
-title: "About | Code Stitch Web Designs"
-description: "Meta description for the page"
+title: "About | Skyline Digital Solutions"
+description: "Learn more about Skyline Digital Solutions and our mission to create clean, modern, high-quality websites that help businesses grow and stand out online."
 permalink: "/about/"
 ---
 
@@ -14,94 +14,221 @@ permalink: "/about/"
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">About Us</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/about/" class="cs-link cs-active">About Us</a>
-            </div>
-        </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-712">
+    <div class="cs-container">
+        <span class="cs-int-title">About</span>
     </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/coding-background.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/coding-background.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/coding-background.jpg" alt="coding laptop" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+                                
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+<section id="content-page-1534">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/coding-side.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/coding-side.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/coding-side.jpg" alt="coding on laptop" width="522" height="540">
+            </picture>
+            <!--Floating Blob-->
+            <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-events-left.svg" alt="graphic" loading="lazy" decoding="async" height="710" width="690">
+        </div>
+        <div class="cs-content">
+            <h1 class="cs-title">About <span class="cs-color">Skyline Digital Solutions</span></h1>
+            
+            <h2>Helping Businesses Build Trust Online Through Professional Websites</h2>
+            <p>
+                Your website is often the first place customers go before deciding to contact your business. Skyline Digital Solutions creates clean, professional websites that help small businesses look credible, explain their services clearly, and make it easier for customers to take the next step.
+            </p>
+            <h2>About Skyline Digital Solutions</h2>
+            <p>
+                Skyline Digital Solutions is a web design and development business focused on helping small businesses build a stronger online presence through clean, modern, and reliable websites.
+            </p>
+            <p>
+                We work with business owners who need more than just a basic website. Your website should help customers understand who you are, what you offer, and why they should trust your business. Whether someone finds you through Google, social media, a referral, or your business card, your website should make a strong first impression immediately.
+            </p>
+            <p>
+                Our goal is to make the website process simple, clear, and professional. We build websites that are easy to navigate, mobile-friendly, organized, and designed around your business goals. From the layout and content to the contact forms and calls-to-action, every part of your website should help your business look more credible and easier to contact.
+            </p>
+            <p>
+                Skyline Digital Solutions offers monthly website plans that include website design and development, mobile-first design, website maintenance, website content setup, as well as domain and hosting setup. This gives business owners a simple way to get a professional website without needing to manage every technical detail on their own.
+            </p>
 
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About CodeStitch</h2>
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to help businesses build trust online through clean, professional, and reliable websites.
+            </p>
+            <p>
+                We believe every business deserves a website that looks credible, communicates clearly, and supports real customer action. A strong website should not confuse visitors or make your business look outdated. It should help people understand your services, feel confident in your business, and know exactly how to contact you.
+            </p>
+            <p>
+                At Skyline Digital Solutions, we focus on creating websites that are simple to use, professional in appearance, and built to support your business long after launch.
+            </p>
+
+            <h2>What We Believe</h2>
+            <h3>Trust Comes First</h3>
+            <p>
+                A professional website helps customers feel more confident before they call, book, or request a quote. If your website looks outdated, unclear, or incomplete, people may hesitate. We design websites that help your business look established, organized, and trustworthy.
+            </p>
+            <h3>Clear Communication Matters</h3>
+            <p>
+                Your website should explain your business in a simple and direct way. Visitors should be able to understand what you offer, who you help, and how to contact you without searching through confusing pages. Clear content and clean structure make your website easier to use.
+            </p>
+            <h3>Mobile-Friendly Design Is Essential</h3>
+            <p>
+                Many customers visit websites from their phones first. That means your website needs to look professional and function properly on mobile devices, tablets, and desktops. We build with a mobile-first approach so your site works smoothly across different screen sizes.
+            </p>
+            <h3>Websites Should Be Simple for Business Owners</h3>
+            <p>
+                You should not have to figure out every technical detail alone. We help with the design, development, content setup, domain setup, hosting setup, maintenance, and ongoing support so your website stays professional and easy to manage.
+            </p>
+            <h3>A Website Should Support Business Growth</h3>
+            <p>
+                A website is not just something to “have.” It should support your business by making your services easier to understand, your contact information easier to find, and your business easier to trust.
+            </p>
+
+            <h2>Who We Help</h2>
+            <p>
+                Skyline Digital Solutions works with small businesses, local businesses, service providers, contractors, startups, and growing businesses that need a professional online presence.
+            </p>
+            <h3>We help businesses that want to:</h3>
+            <ul>
+                <li>Look more professional online</li>
+                <li>Build more trust with potential customers</li>
+                <li>Make their services easier to understand</li>
+                <li>Have a clean and mobile-friendly website</li>
+                <li>Give customers an easy way to call, message, or request a quote</li>
+                <li>Replace an outdated website with something more modern</li>
+                <li>Start with a website without a large upfront project cost</li>
+            </ul>
+            <p>
+                Whether your business is new, growing, or ready for a more professional website, we create websites built around your goals, services, and customers.
+            </p>
+
+            <h2>Our Approach</h2>
+            <p>
+                Our process is designed to be simple, organized, and professional from start to launch.
+            </p>
+            <h3>1. We Learn About Your Business</h3>
+            <p>
+                We start by understanding what your business does, who you serve, what services you offer, and what your website needs to accomplish. This helps us build a website that actually fits your business instead of using a generic layout with no clear direction.
+            </p>
+            <h3>2. We Create a Clear Website Plan</h3>
+            <p>
+                Before building, we organize the structure of your website. This includes the pages, sections, content direction, calls-to-action, and important information customers need to see. A clear plan helps the website feel organized and easy to navigate.
+            </p>
+            <h3>3. We Design and Build Your Website</h3>
+            <p>
+                Once the direction is clear, we design and develop a clean, professional website that reflects your business and helps customers understand your services. The design is built to look polished, modern, and trustworthy.
+            </p>
+            <h3>4. We Make It Mobile-Friendly</h3>
+            <p>
+                Your website is built to work across phones, tablets, and desktops. This helps make sure visitors have a smooth experience no matter how they find your business.
+            </p>
+            <h3>5. We Help With Setup and Launch</h3>
+            <p>
+                We help with domain and hosting setup so your website can go live properly. The goal is to make the launch process simple and avoid unnecessary confusion.
+            </p>
+            <h3>6. We Provide Ongoing Support</h3>
+            <p>
+                After the website is live, we provide maintenance and support to keep your site updated, professional, and working properly. Your website should continue to support your business after launch.
+            </p>
+
+            <h2>Why Businesses Work With Us</h2>
+            <h3>Professional Design</h3>
+            <p>
+                We create websites that help businesses make a strong first impression. A clean, modern design helps your business look credible and ready for customers.
+            </p>
+            <h3>Business-Focused Structure</h3>
+            <p>
+                Your website is built around your business goals, services, and customers. Every page and section should have a clear purpose.
+            </p>
+            <h3>Mobile-First Development</h3>
+            <p>
+                Your website is designed to look good and work properly on phones, tablets, and desktops.
+            </p>
+            <h3>Clear Content Setup</h3>
+            <p>
+                We help organize your website content so visitors can quickly understand what your business offers and how to contact you.
+            </p>
+            <h3>Ongoing Website Maintenance</h3>
+            <p>
+                We provide website maintenance and support to help keep your site current, professional, and functioning properly.
+            </p>
+            <h3>Simple Monthly Website Plans</h3>
+            <p>
+                Our monthly website plans make it easier for businesses to get a professional website with design, development, setup, maintenance, and support included.
+            </p>
+
+            <h2>Ready to Establish Your Online Presence?</h2>
+            <p>
+                Your business deserves a website that looks professional, builds trust, and makes it easy for customers to contact you.
+            </p>
+            <p>
+                Skyline Digital Solutions creates clean, reliable websites designed to help small businesses look credible online and communicate clearly with their customers.
+            </p>
+            <p>
+                If you are ready to build a stronger online presence, start by completing the project questionnaire and taking the first step toward your new website.
+            </p>
+        </div>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+                                
+
+
+   <!-- ============================================ -->
+<!--                Call To Action                -->
+<!-- ============================================ -->
+
+<section id="cta-2443">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Ready To Start?</h2>
+            <div class="cs-flex">
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                 Get a professional website built to help your business look credible, showcase your services, and make it easier for customers to contact you.
                 </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+                <a href="/pricing" class="cs-button-solid">Get Started</a>
             </div>
         </div>
-    </section>
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg" alt="tattoo face" width="1280" height="568">
+    </picture>
+</section>
 
     {% include 'sections/cta.html' %}
 

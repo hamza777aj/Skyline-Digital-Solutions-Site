@@ -1,6 +1,6 @@
 ---
-title: "Contact | Code Stitch Web Designs"
-description: "Meta description for the page"
+title: "Contact | Skyline Digital Solutions"
+description: "Contact Skyline Digital Solutions to discuss your website project, ask questions, or get started building a modern professional website for your business."
 permalink: "/contact/"
 ---
 
@@ -14,107 +14,143 @@ permalink: "/contact/"
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Contact Us</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/contact/" class="cs-link cs-active">Contact Us</a>
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-712">
+    <div class="cs-container">
+        <span class="cs-int-title">Contact</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/coding-background.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/coding-background.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/coding-background.jpg" alt="coding laptop" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+
+ 
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1750">
+    <div class="cs-container">
+        <div class="cs-form-group">
+            <div class="cs-content">
+                <span class="cs-topper">Get in Touch</span>
+                <h2 class="cs-title">Contact Us</h2>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-1750" name="Contact Form" method="post" action="mailto: skyline.digital.solutions777@gmail.com">
+                <label class="cs-label">
+                    Name *
+                    <input class="cs-input" required type="text" id="name-1750" name="name" autocomplete="name" placeholder="John Doe">
+                </label>
+                <label class="cs-label cs-email">
+                    Email *
+                    <input class="cs-input" required type="email" id="email-1750" name="email" autocomplete="email" placeholder="name@company.com">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone *
+                    <input class="cs-input" required type="phone" id="phone-1750" name="phone" autocomplete="tel" placeholder="+1 (206) 987-6543">
+                </label>
+                <label class="cs-label">
+                    Message *
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1750" placeholder="Hello, I am interested in..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+            </form>
+        </div>
+        <!--Contact Info-->
+        <div class="cs-info-group">
+            <div class="cs-info">
+                <span class="cs-topper">Location</span>
+                <span class="cs-detail">Glendale, Arizona, United States</span>
+            </div>
+            <div class="cs-info">
+                <span class="cs-topper">Working Hours</span>
+                <span class="cs-detail">Monday: Open 24 hours</span>
+                <span class="cs-detail">Tuesday: Open 24 hours</span>
+                <span class="cs-detail">Wednesday: Open 24 hours</span>
+                <span class="cs-detail">Thursday: Open 24 hours</span>
+                <span class="cs-detail">Friday: Open 24 hours</span>
+                <span class="cs-detail">Saturday: Open 24 hours</span>
+                <span class="cs-detail">Sunday: Open 24 hours</span>
+            </div>
+            <div class="cs-info">
+                <span class="cs-topper">Contact</span>
+                <span class="cs-detail">Phone: +1 (602) 783-5033</span>
+                <span class="cs-detail">Email: skyline.digital.solutions777@gmail.com</span>
             </div>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
     </div>
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
+    <div class="cs-picture-group">
+        <!--Replace with your iframe for your google business profile-->
+        <iframe class="cs-iframe" title="Location of our business origin" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850778.4304195414!2d-112.75404462277722!3d33.59613797412303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21bf653780468e01%3A0xf7a95f71f0d3f528!2sSkyline%20Digital%20Solutions!5e0!3m2!1sen!2sus!4v1779170708818!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    <section id="cs-contact-265">
-        <div class="cs-container">
-            <div class="cs-left-section">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <form id="cs-form-265" name="Contact Form" method="post">
-                    <label>
-                        Name
-                        <input required type="text" id="name-265" name="name" placeholder="Name">
-                    </label>
-                    <label>
-                        Email
-                        <input required type="text" id="email-265" name="email" placeholder="Email">
-                    </label>
-                    <label>
-                        Phone
-                        <input required type="text" id="phone-265" name="phone" placeholder="Phone">
-                    </label>
-                    <label>
-                        How Did You Find Us
-                        <input type="text" id="find-265" name="find-us" placeholder="How did you find us?">
-                    </label>
-                    <label class="cs-label-message">
-                        Message
-                        <textarea required name="Message" id="message-265" placeholder="Write message..."></textarea>
-                    </label>
-                    <button class="cs-button-solid cs-submit" type="submit">Submit Message</button>
-                </form>
-            </div>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{ client.email }}">{{ client.email }}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{ client.address.mapLink }}">
-                    {{ client.address.lineOne }}, <br>
-                    {{ client.address.lineTwo }}, <br>
-                    {{ client.address.city }}, {{ client.address.state }}
-                    {{ client.address.zip }}
-                </a>
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | jpeg %}" alt="building" width="542" height="578" decoding="async">
-                </picture>
+        <!--All three graphics use the same src, which is transformed in the CSS. If you want to replace the graphic with another one, simply replace all the src's with the same URL and watch the magic happen!-->
+        <img class="cs-graphic cs-top cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-light.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+        <img class="cs-graphic cs-left cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-light.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+        <img class="cs-graphic cs-bottom cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-light.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+
+        <!--This is a dark version. Download the images and change the fill color to match the color of the section background below it-->
+        <img class="cs-graphic cs-top cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-dark.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+        <img class="cs-graphic cs-left cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-dark.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+        <img class="cs-graphic cs-bottom cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-shape-top-dark.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+    </div>
+
+</section>
+                
+<script>
+document.getElementById('cs-form-1750').addEventListener('submit', function(e) {
+  e.preventDefault(); // Stop the default form submit
+  
+  const name = document.getElementById('name-1750').value;
+  const email = document.getElementById('email-1750').value;
+  const phone = document.getElementById('phone-1750').value;
+  const message = document.getElementById('message-1750').value;
+  
+  // Build a clean, readable body string
+  const emailBody = `Name: ${name}\n\nEmail: ${email}\n\nPhone: ${phone}\n\nMessage:\n${message}`;
+  
+  // Use encodeURIComponent ONLY to safely pass the clean text to the mail client
+  window.location.href = `mailto:skyline.digital.solutions777@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+});
+</script>
+
+
+
+<!-- ============================================ -->
+<!--                Call To Action                -->
+<!-- ============================================ -->
+
+<section id="cta-2443">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Ready To Start?</h2>
+            <div class="cs-flex">
+                <p class="cs-text">
+                 Get a professional website built to help your business look credible, showcase your services, and make it easier for customers to contact you.
+                </p>
+                <a href="/pricing" class="cs-button-solid">Get Started</a>
             </div>
         </div>
-    </section>
-
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/art17.jpg" alt="tattoo face" width="1280" height="568">
+    </picture>
+</section>
+    
+    {% include 'sections/cta.html' %}
 {% endblock %}

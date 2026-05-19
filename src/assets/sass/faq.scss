@@ -1,0 +1,443 @@
+/*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #banner-712 {
+        /* 175px - 200px top */
+        padding: clamp(10.9375rem, 10vw, 12.5rem) calc(16 / 16 * 1rem)
+            calc(100 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            text-align: center;
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: calc(16 / 16 * 1rem);
+        }
+
+        .cs-int-title {
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: inherit;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* background color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: 0.75;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #banner-712 {
+        .cs-background {
+            &:before {
+                opacity: 1;
+                background: linear-gradient(
+                    90.01deg,
+                    rgba(0, 0, 0, 0.9) 16.86%,
+                    rgba(0, 0, 0, 0) 100%
+                );
+            }
+        }
+    }
+}
+
+                                
+
+
+
+
+
+
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #faq-326 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(700 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-faq-group {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: calc(12 / 16 * 1rem);
+        }
+
+        .cs-faq-item {
+            list-style: none;
+            width: 100%;
+            background-color: #f7f7f7;
+            /* clips all corners of the button that overlap the rounded border */
+            overflow: hidden;
+            border-radius: calc(12 / 16 * 1rem);
+            transition: border-bottom 0.3s;
+
+            &.active {
+                .cs-button {
+                    background-color: var(--primary);
+                    color: var(--secondaryLight);
+                    &:before {
+                        background-color: var(--secondaryLight);
+                        transform: rotate(315deg);
+                    }
+                    &:after {
+                        background-color: var(--secondaryLight);
+                        transform: rotate(-315deg);
+                    }
+                }
+                .cs-item-p {
+                    height: auto;
+                    /* 20px - 24px top & bottom */
+                    /* 16px - 24px left & right */
+                    padding: clamp(1.25rem, 1.3vw, 1.5rem)
+                        clamp(1rem, 2vw, 1.5rem);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .cs-button {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.2em;
+            text-align: left;
+            font-weight: bold;
+            /* 16px - 20px */
+            padding: clamp(1rem, 1.3vw, 1.25rem);
+            background-color: #f7f7f7;
+            border: none;
+            color: var(--headerColor);
+            display: block;
+            width: 100%;
+            position: relative;
+            transition:
+                background-color 0.3s,
+                color 0.3s;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:before {
+                /* left line */
+                content: "";
+                width: calc(8 / 16 * 1rem);
+                height: calc(2 / 16 * 1rem);
+                background-color: var(--headerColor);
+                opacity: 1;
+                border-radius: 50%;
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: calc(24 / 16 * 1rem);
+                transform: rotate(45deg);
+                /* animate the transform from the left side of the x axis, and the center of the y */
+                transform-origin: left center;
+                transition: transform 0.5s;
+            }
+
+            &:after {
+                /* right line */
+                content: "";
+                width: calc(8 / 16 * 1rem);
+                height: calc(2 / 16 * 1rem);
+                background-color: var(--headerColor);
+                opacity: 1;
+                border-radius: 50%;
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: calc(21 / 16 * 1rem);
+                transform: rotate(-45deg);
+                /* animate the transform from the right side of the x axis, and the center of the y */
+                transform-origin: right center;
+                transition: transform 0.5s;
+            }
+        }
+
+        .cs-button-text {
+            width: 80%;
+            display: block;
+        }
+
+        .cs-item-p {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            width: 90%;
+            height: 0;
+            margin: 0;
+            /* 16px - 24px */
+            padding: 0 clamp(1rem, 2vw, 1.5rem);
+            opacity: 0;
+            color: var(--bodyTextColor);
+            /* clips the text so it doesn't show up */
+            overflow: hidden;
+            transition:
+                opacity 0.3s,
+                padding-bottom 0.3s;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #faq-326 {
+            .cs-topper {
+                color: var(--secondaryLight);
+            }
+
+            .cs-title,
+            .cs-item-p {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-faq-item {
+                background-color: var(--accent);
+                &.active {
+                    .cs-button {
+                        background-color: var(--secondaryLight);
+                        color: var(--primary);
+                        &:before,
+                        &:after {
+                            background-color: var(--primary);
+                        }
+                    }
+                }
+            }
+
+            .cs-button {
+                background-color: var(--accent);
+                color: var(--bodyTextColorWhite);
+                &:before,
+                &:after {
+                    background-color: var(--bodyTextColorWhite);
+                }
+            }
+        }
+    }
+}
+
+                                
+
+
+
+
+
+
+
+
+/*-- -------------------------- -->
+<---       Call To Action       -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+    #cta-2443 {
+        padding: var(--sectionPadding);
+        background-color: #010104;
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280/16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* 40px - 48px */
+            gap: clamp(2.5rem, 5vw, 3rem);
+        }
+    
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+            gap: calc(32/16 * 1rem);
+        }
+
+        .cs-title {
+            font-size: clamp(calc(61/16 * 1rem), 8vw, calc(120/16 * 1rem));
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+            flex: none;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16/16 * 1rem);
+            color: var(--bodyTextColorWhite);
+            opacity: .8;
+
+            &:last-of-type {
+                margin-bottom: calc(32/16 * 1rem);
+            }
+        }
+    
+        .cs-button-solid {
+            font-size: calc(16/16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150/16 * 1rem);
+            padding: 0 calc(24/16 * 1rem);
+            background-color: var(--primary);
+            border-radius: calc(4/16 * 1rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+    
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: calc(4/16 * 1rem);
+                transition: width .3s;
+            }
+    
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: .08;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
+
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #cta-2443 {
+        .cs-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .cs-flex {
+            max-width: calc(372/16 * 1rem);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+    body.dark-mode {
+        #cta-2443 {
+            background-color: rgba(0, 0, 0, .8);
+        }
+    }
+}
