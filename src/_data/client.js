@@ -1,11 +1,11 @@
 module.exports = {
-    name: "Slate Digital Solutions",
-    email: "dkyline-digital-solutions777@gmail.com",
+    name: "Skyline Digital Solutions",
+    email: "skyline-digital-solutions777@gmail.com",
     phoneForTel: "+1(602)-783-5033", // Format for tel: links (no parentheses or dashes)
     phoneFormatted: "+1 (602) 783-5033",
     address: {
-        lineOne: "First Address Line",
-        lineTwo: "Second Address Line",
+        lineOne: "",
+        lineTwo: "",
         city: "Glendale",
         state: "AZ",
         zip: "85306",
