@@ -8,25 +8,10 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7RW82KRGZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q7RW82KRGZ');
-</script>
-
-
-
-
     <!-- Critical styles are loaded first -->
-<link rel="stylesheet" href="/assets/css/critical.css" />
-
-<!-- Main styles -->
-<link rel="stylesheet" href="/assets/css/local.css"/>
-
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+    <link rel="stylesheet" href="/assets/css/local.css"/>
+    
     <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
     <!--
     {% if client.isProduction %}
@@ -38,7 +23,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     {% else %}
         <link rel="stylesheet" href="/assets/css/local.css" />
     {% endif %}
-     -->
+    -->
     <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
     <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
     {% include "components/home-schema.html" %}
