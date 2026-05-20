@@ -1,16 +1,16 @@
 module.exports = {
-    name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
-    phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
+    name: "Slate Digital Solutions",
+    email: "dkyline-digital-solutions777@gmail.com",
+    phoneForTel: "+1(602)-783-5033", // Format for tel: links (no parentheses or dashes)
+    phoneFormatted: "+1 (602) 783-5033",
     address: {
         lineOne: "First Address Line",
         lineTwo: "Second Address Line",
-        city: "Denver",
-        state: "CO",
-        zip: "80206",
+        city: "Glendale",
+        state: "AZ",
+        zip: "85306",
         country: "US",
-        mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
+        mapLink: "https://maps.app.goo.gl/rbq19ZobU8snJ1FWA",
     },
     socials: {
         facebook: "https://www.facebook.com/",
