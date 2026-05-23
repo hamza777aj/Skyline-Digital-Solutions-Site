@@ -3,6 +3,7 @@
         "@context": "http://schema.org",
         "@type": "LocalBusiness",
         "name": "{{ client.name }}",
+        "logo": "{{ client.domain }}/assets/images/square-light.png",
         {% if preloadImg %}"image": "{{ client.domain }}{{ preloadImg }}",{% endif %}
         {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
         {% if client.email %}"email": "{{ client.email }}",{% endif %}
