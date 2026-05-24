@@ -8,15 +8,7 @@ permalink: "/contact/"
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7RW82KRGZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q7RW82KRGZ');
-</script>
+   
 
 
     <link rel="stylesheet" href="/assets/css/contact.css?v=20">
@@ -121,7 +113,7 @@ permalink: "/contact/"
             <div class="cs-info">
                 <span class="cs-topper">Contact</span>
                 <span class="cs-detail">Phone: +1(602)-783-5033</span>
-                <span class="cs-detail">Email: skyline.digital.solutions777@gmail.com</span>
+                <span class="cs-detail">Email: hello@skyline-digital-studio.com</span>
             </div>
         </div>
     </div>
@@ -156,7 +148,7 @@ document.getElementById('cs-form-1750').addEventListener('submit', function(e) {
   const emailBody = `Name: ${name}\n\nEmail: ${email}\n\nPhone: ${phone}\n\nMessage:\n${message}`;
   
   // Use encodeURIComponent ONLY to safely pass the clean text to the mail client
-  window.location.href = `mailto:skyline.digital.solutions777@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+  window.location.href = `mailto:hello@skyline-digital-studio.com?subject=Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
 });
 </script>
 
