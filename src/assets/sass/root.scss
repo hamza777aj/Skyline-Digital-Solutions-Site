@@ -915,7 +915,7 @@
 		.cs-container {
 			width: 100%;
 			max-width: calc(1440 / 16 * 1rem);
-			margin: auto;
+			margin: 0;
 			/* prevents padding from affecting height and width */
 			box-sizing: border-box;
 			padding: 0 calc(24 / 16 * 1rem);
@@ -930,8 +930,8 @@
 		}
 
 		.cs-logo {
-			width: 18.4%;
-			max-width: calc(350 / 16 * 1rem);
+			width: auto;
+			max-width: calc(280 / 16 * 1rem);
 			height: calc(64 / 16 * 1rem);
 			/* margin-right auto pushes everything away from it to the right */
 			margin: 0 auto 0 0;
