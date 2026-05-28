@@ -28,6 +28,8 @@
 		--bodyFontSize: 1rem;
 		/* 60px - 100px top and bottom */
 		--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+		--headerFont: "Plus Jakarta Sans", sans-serif;
+		--bodyFont: "Plus Jakarta Sans", sans-serif;
 	}
 
 	body {
@@ -239,6 +241,7 @@
 	p,
 	li,
 	a {
+		font-family: var(--bodyFont);
 		font-size: calc(16 / 16 * 1rem);
 		line-height: 1.5em;
 	}
