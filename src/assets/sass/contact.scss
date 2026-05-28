@@ -541,8 +541,8 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     #cta-2443 {
-        padding: var(--sectionPadding);
-        background-color: #010104;
+        padding: calc(32 / 16 * 1rem) calc(32 / 16 * 1rem) calc(48 / 16 * 1rem);
+        background-color: #1a1a1a;
         position: relative;
         z-index: 1;
 
@@ -570,7 +570,7 @@
         }
 
         .cs-title {
-            font-size: clamp(calc(61/16 * 1rem), 8vw, calc(120/16 * 1rem));
+            font-size: clamp(calc(36 / 16 * 1rem), 5vw, calc(64 / 16 * 1rem));
             margin: 0;
             color: var(--bodyTextColorWhite);
             flex: none;
@@ -664,12 +664,4 @@
         }
     }
 }
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #cta-2443 {
-            background-color: rgba(0, 0, 0, .8);
-        }
-    }
-}
+  
