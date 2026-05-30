@@ -915,7 +915,7 @@
 		.cs-container {
 			width: 100%;
 			max-width: calc(1440 / 16 * 1rem);
-			margin: 0;
+			margin: 0 auto;
 			/* prevents padding from affecting height and width */
 			box-sizing: border-box;
 			padding: 0 calc(24 / 16 * 1rem);
@@ -934,7 +934,8 @@
 			max-width: calc(280 / 16 * 1rem);
 			height: calc(64 / 16 * 1rem);
 			/* margin-right auto pushes everything away from it to the right */
-			margin: 0 auto 0 0;
+			margin: 0;
+			flex-shrink: 0;
 			padding: 0;
 			display: flex;
 			justify-content: flex-start;
@@ -954,6 +955,7 @@
 			justify-content: center;
 			align-items: center;
 			gap: calc(24 / 16 * 1rem);
+			flex-shrink: 0;
 		}
 
 		.cs-phone {
@@ -967,6 +969,7 @@
 			align-items: center;
 			gap: calc(8 / 16 * 1rem);
 			transition: opacity 0.3s, color 0.3s;
+			white-space: nowrap;
 		}
 
 		.cs-phone-icon {
@@ -1020,10 +1023,10 @@
 			display: flex;
 			align-items: center;
 			/* absolutely positioned to be dead center */
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			position: static;
+	transform: none;
+	flex: 1;
+	justify-content: center;
 		}
 
 		.cs-ul {
