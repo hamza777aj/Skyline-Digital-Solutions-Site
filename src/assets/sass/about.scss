@@ -17,6 +17,7 @@
             calc(100 / 16 * 1rem);
         position: relative;
         z-index: 1;
+        background-color: var(--primary);
 
         .cs-container {
             text-align: center;
@@ -106,7 +107,7 @@
 @media only screen and (min-width: 0rem) {
     #quote-561 {
         padding: var(--sectionPadding);
-        background-color: #f7f7f7;
+        background-color: var(--cardBackgroundStrong);
 
         .cs-container {
             width: 100%;
@@ -163,7 +164,7 @@
             line-height: 1.2em;
             font-weight: 900;
             margin: 0;
-            color: #000;
+            color: var(--headerColor);
         }
 
         .cs-name {
@@ -193,6 +194,7 @@
         }
     }
 }
+
 
 
 
@@ -230,7 +232,7 @@
 
     #content-page-1534 {
         padding: var(--sectionPadding);
-        background-color: #fff;
+        background-color: var(--cardBackground);
         /* clips the wave background from causing overflow issues when it goes off screen */
         overflow: hidden;
         position: relative;
@@ -475,7 +477,6 @@
 }
                                 
 
-
 /*-- -------------------------- -->
 <---       Call To Action       -->
 <--- -------------------------- -*/
@@ -552,7 +553,7 @@
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                background: #000;
+                background: var(--primaryDark);
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -606,4 +607,4 @@
         }
     }
 }
-  
+ 

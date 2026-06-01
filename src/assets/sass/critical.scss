@@ -36,6 +36,9 @@
     }
 
     #hero-1350 {
+        background:
+  radial-gradient(circle at top right, rgba(29, 142, 201, 0.4), transparent 45%),
+  linear-gradient(135deg, #CDE8FF 0%, #A9D8FF 50%, #E4F5FF 100%);
         /* 250px - 500px - leaving extra space for the navigation */
         padding: clamp(15.625rem, 35.95vw, 25rem) calc(16 / 16 * 1rem) 0;
         /* 200px - 250px */
@@ -105,7 +108,7 @@
             text-align: inherit;
             letter-spacing: 0.1em;
             font-weight: 700;
-            color: #e8e8e8;
+            color: var(--primary);
             margin-bottom: calc(8 / 16 * 1rem);
             display: block;
         }
@@ -118,7 +121,7 @@
             text-align: inherit;
             max-width: 20ch;
             margin: 0 0 calc(16 / 16 * 1rem) 0;
-            color: #fff;
+            color: var(--headerColor);
             position: relative;
         }
 
@@ -130,7 +133,7 @@
             /* 464px - 622px */
             max-width: clamp(29rem, 60vw, 38.785rem);
             margin: 0 0 calc(40 / 16 * 1rem) 0;
-            color: #e8e8e8;
+            color: var(--bodyTextColor);
         }
 
         .cs-button-solid {
@@ -141,7 +144,7 @@
             font-weight: 700;
             text-align: center;
             margin: 0;
-            color: #fff;
+            color: var(--bodyTextColorWhite);
             min-width: calc(150/16 * 1rem);
             padding: 0 calc(24/16 * 1rem);
             background-color: var(--primary);
@@ -157,7 +160,7 @@
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                background: #fff;
+                background: var(--primaryDark);
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -167,7 +170,6 @@
             }
     
             &:hover {
-                color: #000;
                 &:before {
                     width: 100%;
                 }

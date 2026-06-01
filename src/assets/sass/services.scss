@@ -10,6 +10,7 @@
             calc(100 / 16 * 1rem);
         position: relative;
         z-index: 1;
+        background-color: var(--primary);
 
         .cs-container {
             text-align: center;
@@ -90,7 +91,6 @@
               
 
 
-
 /*-- -------------------------- -->
 <---           Quote            -->
 <--- -------------------------- -*/
@@ -99,7 +99,7 @@
 @media only screen and (min-width: 0rem) {
     #quote-561 {
         padding: var(--sectionPadding);
-        background-color: #f7f7f7;
+        background-color: var(--cardBackgroundStrong);
 
         .cs-container {
             width: 100%;
@@ -156,7 +156,7 @@
             line-height: 1.2em;
             font-weight: 900;
             margin: 0;
-            color: #000;
+            color: var(--headerColor);
         }
 
         .cs-name {
@@ -192,6 +192,7 @@
 
 
 
+                                
 /*-- -------------------------- -->
 <---         Services           -->
 <--- -------------------------- -*/
@@ -200,6 +201,7 @@
 @media only screen and (min-width: 0rem) {
     #services-1378 {
         padding: var(--sectionPadding);
+        background-color: var(--cardBackground);
 
         .cs-container {
             width: 100%;
@@ -255,7 +257,7 @@
             /* 16px - 40px */
             padding: clamp(1rem, 3vw, 2.5rem);
             padding-top: 0;
-            background-color: #f4f4f4;
+            background-color: var(--primary);
             border-radius: calc(24 / 16 * 1rem);
             display: flex;
             flex-direction: column;
@@ -265,11 +267,8 @@
             z-index: 1;
             transition: background-color 0.3s;
 
-            &:hover {
-                background-color: var(--primary);
-
-                .cs-picture {
-                    background-color: var(--primary);
+.cs-picture {
+                    background-color: var(--primaryDark);
                 }
 
                 .cs-icon,
@@ -279,7 +278,7 @@
 
                 .cs-h3,
                 .cs-item-text {
-                    color: #fff;
+                    color: var(--bodyTextColorWhite);
                 }
 
                 .cs-item-text {
@@ -287,7 +286,32 @@
                 }
 
                 .cs-link {
-                    border-color: #fff;
+                    border-color: var(--borderColorStrong);
+                }
+
+            &:hover {
+                background-color: var(--primary);
+
+                .cs-picture {
+                    background-color: var(--primaryDark);
+                }
+
+                .cs-icon,
+                .cs-arrow {
+                    filter: grayscale(1) brightness(1000%);
+                }
+
+                .cs-h3,
+                .cs-item-text {
+                    color: var(--bodyTextColorWhite);
+                }
+
+                .cs-item-text {
+                    opacity: 0.8;
+                }
+
+                .cs-link {
+                    border-color: var(--borderColorStrong);
                 }
             }
         }
@@ -298,7 +322,7 @@
             margin: calc(-44 / 16 * 1rem) 0 clamp(1.75rem, 3vw, 2.25rem) 0;
             box-sizing: border-box;
             background-color: var(--primary);
-            border: 2px solid #fff;
+            border: 2px solid var(--borderColorStrong);
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -339,7 +363,7 @@
             width: calc(64 / 16 * 1rem);
             height: calc(64 / 16 * 1rem);
             color: var(--headerColor);
-            border: 1px solid #bababa;
+            border: 1px solid var(--borderColorStrong);
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -396,7 +420,7 @@
                     }
 
                     .cs-arrow-wrapper {
-                        border-color: #fff;
+                        border-color: var(--borderColorStrong);
                     }
                 }
             }
@@ -423,7 +447,6 @@
         }
     }
 }
-
 
 
 
@@ -506,7 +529,7 @@
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                background: #000;
+                background: var(--primaryDark);
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -560,4 +583,4 @@
         }
     }
 }
-  
+ 

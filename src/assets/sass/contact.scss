@@ -19,6 +19,7 @@
             calc(100 / 16 * 1rem);
         position: relative;
         z-index: 1;
+        background-color: var(--primary);
 
         .cs-container {
             text-align: center;
@@ -108,7 +109,7 @@
 @media only screen and (min-width: 0rem) {
     #quote-561 {
         padding: var(--sectionPadding);
-        background-color: #f7f7f7;
+        background-color: var(--cardBackgroundStrong);
 
         .cs-container {
             width: 100%;
@@ -147,6 +148,7 @@
             justify-content: flex-start;
             align-items: center;
             gap: calc(24 / 16 * 1rem);
+
             &:before {
                 /* yellow line */
                 content: "";
@@ -164,7 +166,7 @@
             line-height: 1.2em;
             font-weight: 900;
             margin: 0;
-            color: #000;
+            color: var(--headerColor);
         }
 
         .cs-name {
@@ -199,6 +201,7 @@
 
 
 
+
 /*-- -------------------------- -->
 <---          Contact           -->
 <--- -------------------------- -*/
@@ -210,13 +213,14 @@
         overflow: hidden;
         position: relative;
         z-index: 1;
+        background-color: var(--cardBackground);
 
         .cs-container {
             width: 100%;
             /* changes to 1024 on desktop */
             max-width: calc(704/16 * 1rem);
             margin: auto;
-            background-color: #fff;
+            background-color: var(--cardBackgroundStrong);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -247,6 +251,7 @@
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
+            padding: 50px;
         }
 
         .cs-title {
@@ -284,7 +289,7 @@
             box-sizing: border-box;
             padding: 0;
             padding-left: calc(24/16 * 1rem);
-            background-color: #f7f7f7;
+            background-color: var(--cardBackground);
             color: var(--headerColor);
             border: none;
 
@@ -325,7 +330,7 @@
                 content: "";
                 width: 0%;
                 height: 100%;
-                background: #000;
+                background: var(--primaryDark);
                 opacity: 1;
                 position: absolute;
                 top: 0;
@@ -357,6 +362,7 @@
             display: flex;
             flex-direction: column;
             gap: calc(24/16 * 1rem);
+            padding: 50px;
         }
 
         .cs-info {
@@ -533,7 +539,6 @@
                                 
 
 
-
 /*-- -------------------------- -->
 <---       Call To Action       -->
 <--- -------------------------- -*/
@@ -610,7 +615,7 @@
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                background: #000;
+                background: var(--primaryDark);
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -664,4 +669,4 @@
         }
     }
 }
-  
+ 
