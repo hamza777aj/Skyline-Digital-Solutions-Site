@@ -11,7 +11,8 @@ permalink: "/contact/"
    
 
 
-    <link rel="stylesheet" href="/assets/css/contact.css?v=21">
+
+    <link rel="stylesheet" href="/assets/css/contact.css">
  {% endblock %}
 
 {% block body %}
@@ -38,11 +39,10 @@ permalink: "/contact/"
 <section id="quote-561">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Our Approach</span>
+            <span class="cs-topper">Your Project Starts Here</span>
             <p class="cs-quote">
-                Start with a simple project form so we can understand your business and recommend the right website plan.
+                Every website project begins with understanding the business behind it. Share your goals, ideas, and what you're looking for in a website, and we'll help you explore the options that best fit your needs.
             </p>
-            <span class="cs-name">Hamza Abduljawad - Founder of Skyline Digital Solutions</span>
         </div>
     </div>
 </section>
@@ -53,90 +53,87 @@ permalink: "/contact/"
 <!--                   Contact                    -->
 <!-- ============================================ -->
 
-<section id="contact-1750">
+<section id="contact-2061">
     <div class="cs-container">
-        <div class="cs-form-group">
-            <div class="cs-content">
-                <span class="cs-topper">Get in Touch</span>
-                <h2 class="cs-title">Contact Us</h2>
-            </div>
-            <!--Form-->
-            <p>
-                Have a question about your website project? Send a message and we’ll help you understand the next step, whether you need a new website, a clearer online presence, or more information about our monthly website plans.
-            </p>
-            <form class="cs-form" id="cs-form-1750" name="Contact Form" method="post" action="mailto: hello@skyline-digital-studio.com">
-                <label class="cs-label">
-                    Name *
-                    <input class="cs-input" required type="text" id="name-1750" name="name" autocomplete="name" placeholder="John Doe">
-                </label>
-                <label class="cs-label cs-email">
-                    Email *
-                    <input class="cs-input" required type="email" id="email-1750" name="email" autocomplete="email" placeholder="name@company.com">
-                </label>
-                <label class="cs-label cs-phone">
-                    Phone *
-                    <input class="cs-input" required type="phone" id="phone-1750" name="phone" autocomplete="tel" placeholder="+1 (206) 987-6543">
-                </label>
-                <label class="cs-label">
-                    Message *
-                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1750" placeholder="I would like to submit a ticket to update the website please..."></textarea>
-                </label>
+        <div class="cs-content">
+            <span class="cs-topper">Get Started</span>
+            <h2 class="cs-title">Tell Us About Your Project</h2>
+            <p class="cs-text">Tell us about your business, goals, and website needs. We'll review your inquiry and follow up to discuss the next steps.</p>
+        </div>
+
+        <!--Form-->
+        <form class="cs-form" id="cs-form-2061" name="Contact Form" action="https://formspree.io/f/xvkkndkv" method="post">
+            <label class="cs-label cs-split">
+                Full Name *
+                <input class="cs-input" type="text" id="name-2061" name="name" placeholder="Your Full Name" autocomplete="name" maxlength="120" required>
+            </label>
+
+            <label class="cs-label cs-split">
+                Business Name *
+                <input class="cs-input" type="text" id="business-name-2061" name="business_name" placeholder="Your Business Name" autocomplete="organization" maxlength="150" required>
+            </label>
+
+            <label class="cs-label cs-split">
+                Email Address *
+                <input class="cs-input" type="email" id="email-2061" name="email" placeholder="name@example.com" autocomplete="email" maxlength="254" required>
+            </label>
+
+            <label class="cs-label cs-split">
+                Phone Number
+                <input class="cs-input" type="tel" id="phone-2061" name="phone" placeholder="(555) 123-4567" autocomplete="tel">
+            </label>
+
+            <label class="cs-label">
+                Project Type *
+                <select class="cs-input cs-select" id="project-type-2061" name="project_type" required>
+                    <option value="" disabled selected>Select a Project Type</option>
+                    <option value="new_business_website">New Business Website</option>
+                    <option value="website_redesign">Website Redesign</option>
+                    <option value="custom_website_requirements">Custom Website Requirements</option>
+                    <option value="not_sure">Not Sure Yet</option>
+                </select>
+            </label>
+
+            <label class="cs-label">
+                <span id="website-label-2061">Current Website URL</span>
+                <input class="cs-input" type="url" id="website-2061" name="website" maxlength="2048" placeholder="https://example.com" aria-labelledby="website-label-2061" aria-describedby="website-help-2061">
+                <small id="website-help-2061">If you already have a website, enter its URL, including https://</small>
+            </label>
+
+            <label class="cs-label cs-message">
+                <span id="description-label-2061">Tell Us About Your Project *</span>
+                <textarea class="cs-input cs-textarea" id="description-2061" name="description" placeholder="Briefly describe your business, website goals, and what you're looking to accomplish." rows="6" maxlength="3000" aria-labelledby="description-label-2061" aria-describedby="description-help-2061" required></textarea>
+                <small id="description-help-2061">Describe your business, website goals, and any specific requirements.</small>
+            </label>
+
+            <label class="cs-label cs-split">
+                Website Plan of Interest
+                <select class="cs-input cs-select" id="plan-interest-2061" name="plan_interest">
+                    <option value="" selected>Select a Plan</option>
+                    <option value="starter">Starter</option>
+                    <option value="professional">Professional</option>
+                    <option value="custom">Custom</option>
+                    <option value="not_sure">Not Sure Yet</option>
+                </select>
+            </label>
+
+            <label class="cs-label cs-split">
+                Desired Project Timeline
+                <select class="cs-input cs-select" id="timeline-2061" name="timeline">
+                    <option value="" selected>Select a Timeframe</option>
+                    <option value="as_soon_as_possible">As Soon as Possible</option>
+                    <option value="within_1_to_3_months">Within 1-3 Months</option>
+                    <option value="within_3_to_6_months">Within 3-6 Months</option>
+                    <option value="flexible">Flexible / Not Sure</option>
+                </select>
+            </label>
+
+            <div class="cs-wrapper">
                 <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
-            </form>
-        </div>
-        <!--Contact Info-->
-        <div class="cs-info-group">
-            <div class="cs-info">
-                <span class="cs-topper">Response Time</span>
-                <span class="cs-detail">Messages can be sent anytime through the contact form. We respond during business hours.</span>
             </div>
-            <div class="cs-info">
-                <span class="cs-topper">Location</span>
-                <span class="cs-detail">Glendale, Arizona, United States</span>
-            </div>
-            <div class="cs-info">
-                <span class="cs-topper">Working Hours</span>
-                <span class="cs-detail">Monday:    9am - 7pm MST</span>
-                <span class="cs-detail">Tuesday:   9am - 7pm MST</span>
-                <span class="cs-detail">Wednesday: 9am - 7pm MST</span>
-                <span class="cs-detail">Thursday:  9am - 7pm MST</span>
-                <span class="cs-detail">Friday:    9am - 7pm MST</span>
-                <span class="cs-detail">Saturday:  9am - 7pm MST</span>
-                <span class="cs-detail">Sunday:    9am - 7pm MST</span>
-            </div>
-            <div class="cs-info">
-                <span class="cs-topper">Contact</span>
-                <span class="cs-detail">Phone: +1(602)-783-5033</span>
-                <span class="cs-detail">Email: hello@skyline-digital-studio.com</span>
-            </div>
-        </div>
+        </form>
     </div>
-
-    <div class="cs-picture-group">
-        <!--Replace with your iframe for your google business profile-->
-        <iframe class="cs-iframe" title="Location of our business origin" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850778.4304195414!2d-112.75404462277722!3d33.59613797412303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21bf653780468e01%3A0xf7a95f71f0d3f528!2sSkyline%20Digital%20Solutions!5e0!3m2!1sen!2sus!4v1779170708818!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        /div>
-
 </section>
-                
-<script>
-document.getElementById('cs-form-1750').addEventListener('submit', function(e) {
-  e.preventDefault(); // Stop the default form submit
-  
-  const name = document.getElementById('name-1750').value;
-  const email = document.getElementById('email-1750').value;
-  const phone = document.getElementById('phone-1750').value;
-  const message = document.getElementById('message-1750').value;
-  
-  // Build a clean, readable body string
-  const emailBody = `Name: ${name}\n\nEmail: ${email}\n\nPhone: ${phone}\n\nMessage:\n${message}`;
-  
-  // Use encodeURIComponent ONLY to safely pass the clean text to the mail client
-  window.location.href = `mailto:hello@skyline-digital-studio.com?subject=Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
-});
-</script>
-
 
 
 <!-- ============================================ -->
@@ -146,16 +143,15 @@ document.getElementById('cs-form-1750').addEventListener('submit', function(e) {
 <section id="cta-2443">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Ready to Establish Your Online Presence?</h2>
+            <h2 class="cs-title">Let's Discuss Your Website Project</h2>
             <div class="cs-flex">
                 <p class="cs-text">
-                    Get a professional website built to help your business look credible, explain your services clearly, and make it easier for customers to contact you.
+                    Whether you're planning a new website or improving an existing one, we'd like to understand your business, discuss your requirements, and explore how our services can support your goals.
                 </p>
-                <a href="/pricing" class="cs-button-solid">View Pricing</a>
+                <a href="/contact/" class="cs-button-solid">Ready to Discuss Your Project?</a>
             </div>
         </div>
     </div>
-  
 </section>
     
     {% include 'sections/cta.html' %}

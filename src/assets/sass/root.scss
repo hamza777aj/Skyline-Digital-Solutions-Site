@@ -12,6 +12,9 @@
 /* CodeStitch Core Styles + Reset */
 @media only screen and (min-width: 0px) {
 	/* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+	
+	/* ORIGINAL ROOT VARIABLES */
+	/*
 	:root {
   --primary: #1D8EC9;
   --primaryDark: #126A99;
@@ -28,19 +31,89 @@
   --backgroundLight: #F5FAFE;
   --backgroundBlue: #DDF2FF;
 
-  /* Stronger card colors */
+  // Stronger card colors 
   --cardBackground: #DDF2FF;
   --cardBackgroundStrong: #B8DDFF;
   --cardBorder: #7CCAF2;
   --cardBorderStrong: #1D8EC9;
-	
+	*/
+
+	/* NEW ROOT VARIABLES */
+	:root {
+
+/* Primary blues */
+	--primary: #00628F;
+	--primaryDark: #004D70;
+
+	/* Pale accents and surfaces, not text colors on light backgrounds */
+	--secondary: #7CCAF2;
+	--secondaryLight: #DDF2FF;
+	--primaryLight: #B8DDFF;
+
+	/* Text colors */
+	--headerColor: #10232E;
+	--bodyTextColor: #4E5D66;
+	--bodyTextColorWhite: #FAFBFC;
+
+	/* Shared backgrounds */
+	--backgroundWhite: #FFFFFF;
+	--backgroundLight: #F5FAFE;
+	--backgroundBlue: #CDE8FF;
+
+	/* Cards */
+	--cardBackground: var(--backgroundBlue);
+	--cardBackgroundStrong: var(--primaryLight);
+	--cardBorder: var(--secondary);
+	/* Decorative borders only */
+	--cardBorderStrong: var(--primary);
+
+
+	/* Navigation */
+	--navBackground: var(--backgroundLight);
+	--navLinkColor: var(--primary);
+	--navLinkHoverColor: var(--primaryDark);
+
+	/* Footer */
+	--footerBackground: var(--headerColor);
+	--footerTextColor: var(--bodyTextColorWhite);
+	--footerLinkColor: var(--bodyTextColorWhite);
+	--footerLinkHoverColor: var(--secondary);
+
+
+	/* Hero: preserve the original light-blue appearance */
+	--heroStart: var(--backgroundBlue);
+	--heroMiddle: #A9D8FF;
+	--heroEnd: #E4F5FF;
+
+	/* Original decorative blue, separate from button colors */
+	--heroAccentRGB: 29, 142, 201;
+	--heroAccent: rgb(var(--heroAccentRGB));
+	--heroGlow: rgba(var(--heroAccentRGB), 0.4);
+
+	/* Dark text for the hero paragraph */
+	--heroText: var(--headerColor);
+
+	/* Original hero gradient */
+	--heroBackground:
+		radial-gradient(circle at top right,
+			var(--heroGlow),
+			transparent 45%),
+		linear-gradient(135deg,
+			var(--heroStart) 0%,
+			var(--heroMiddle) 50%,
+			var(--heroEnd) 100%);
+
+
+
+
+
 		/* 13px - 16px */
 		--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
 		/* 31px - 49px */
 		--headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
 		--bodyFontSize: 1rem;
-		/* 60px - 100px top and bottom */
-		--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+		/* 48px - 72px top and bottom; 16px horizontal gutters */
+		--sectionPadding: clamp(3rem, 6vw, 4.5rem) 1rem;
 		--headerFont: "Plus Jakarta Sans", sans-serif;
 		--bodyFont: "Plus Jakarta Sans", sans-serif;
 	}
@@ -48,6 +121,15 @@
 	body {
 		margin: 0;
 		padding: 0;
+		font-family: var(--bodyFont);
+		font-weight: 400;
+	}
+
+	button,
+	input,
+	select,
+	textarea {
+		font-family: inherit;
 	}
 
 	*, *:before, *:after {
@@ -68,7 +150,7 @@
 
 	.cs-title {
 		font-size: var(--headerFontSize);
-		font-weight: 900;
+		font-weight: 800;
 		line-height: 1.2em;
 		text-align: inherit;
 		max-width: calc(700 / 16 * 1rem);
@@ -97,10 +179,127 @@
 		top: 0;
 		left: 0;
 		opacity: 0;
+
+	&:focus {
+		position: fixed;
+		top: 1rem;
+		left: 1rem;
+		z-index: 10001;
+		opacity: 1;
+		padding: 0.75rem 1rem;
+		max-width: calc(100% - 2rem);
+		background-color: var(--backgroundWhite);
+		color: var(--primary);
+		font-family: var(--bodyFont);
+		font-weight: 700;
+		line-height: 1.5;
 	}
 
+	a:focus-visible,
+	button:focus-visible,
+	input:focus-visible,
+	select:focus-visible,
+	textarea:focus-visible,
+	summary:focus-visible {
+		outline: 2px solid var(--primary);
+		outline-offset: 2px;
+		box-shadow: 0 0 0 2px var(--backgroundWhite);
+	}
+}
 
-	// Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
+    //ORIGINAL BUTTONS COMMENTED OUT BELOW. REPLACED WITH CODESTITCH BUTTON STITCHES. KEEP THIS COMMENTED OUT CODE IN CASE YOU WANT TO REVERT BACK TO ORIGINAL BUTTON STYLES.
+	// // Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
+	// .cs-button-solid {
+	// 	z-index: 1;
+	// 	position: relative;
+	// 	display: inline-block;
+	// 	background-color: var(--primary);
+	// 	width: auto;
+	// 	padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+	// 	text-decoration: none;
+	// 	text-transform: uppercase;
+	// 	font-size: calc(16 / 16 * 1rem);
+	// 	line-height: calc(16 / 16 * 1em);
+	// 	font-weight: bold;
+	// 	border-radius: calc(4 / 16 * 1rem);
+	// 	overflow: hidden;
+
+	// 	// Transition Properties
+	// 	color: var(--bodyTextColorWhite);
+	// 	transition: color 0.3s;
+	// 	transition-delay: 0.1s;
+	// 	text-align: center;
+
+	// 	&:hover {
+	// 		color: #fff;
+
+	// 		&:before {
+	// 			width: 100%;
+	// 		}
+	// 	}
+
+	// 	&:before {
+	// 		z-index: -1;
+	// 		position: absolute;
+	// 		top: 0;
+	// 		left: 0;
+	// 		content: "";
+	// 		opacity: 1;
+	// 		display: block;
+	// 		background-color: var(--primaryDark);
+	// 		height: 100%;
+
+	// 		//Transition properties
+	// 		width: 0;
+	// 		transition: width 0.3s;
+	// 	}
+	// }
+
+	// .cs-button-outline {
+	// 	z-index: 1;
+	// 	position: relative;
+	// 	display: inline-block;
+	// 	width: auto;
+	// 	padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+	// 	text-decoration: none;
+	// 	text-transform: uppercase;
+	// 	font-size: calc(16 / 16 * 1rem);
+	// 	line-height: calc(16 / 16 * 1em);
+	// 	font-weight: bold;
+	// 	border: 2px solid #000;
+
+	// 	// Transition Properties
+	// 	color: #000;
+	// 	transition: color 0.3s;
+	// 	transition-delay: 0.1s;
+	// 	text-align: center;
+
+	// 	&:hover {
+	// 		color: #fff;
+
+	// 		&:before {
+	// 			width: 100%;
+	// 		}
+	// 	}
+
+	// 	&:before {
+	// 		z-index: -1;
+	// 		position: absolute;
+	// 		top: 0;
+	// 		left: 0;
+	// 		content: "";
+	// 		opacity: 1;
+	// 		display: block;
+	// 		background-color: #000;
+	// 		height: 100%;
+
+	// 		//Transition properties
+	// 		width: 0;
+	// 		transition: width 0.3s;
+	// 	}
+	// }
+
+		// Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
 	.cs-button-solid {
 		z-index: 1;
 		position: relative;
@@ -113,7 +312,7 @@
 		font-size: calc(16 / 16 * 1rem);
 		line-height: calc(16 / 16 * 1em);
 		font-weight: bold;
-		border-radius: calc(4 / 16 * 1rem);
+		border-radius: calc(16 / 16 * 1rem);
 		overflow: hidden;
 
 		// Transition Properties
@@ -138,12 +337,12 @@
 			content: "";
 			opacity: 1;
 			display: block;
-			background-color: #000;
+			background-color: var(--primaryDark);
 			height: 100%;
 
 			//Transition properties
 			width: 0;
-			transition: width 0.3s;
+			transition: opacity 0.3s;
 		}
 	}
 
@@ -158,19 +357,22 @@
 		font-size: calc(16 / 16 * 1rem);
 		line-height: calc(16 / 16 * 1em);
 		font-weight: bold;
-		border: 2px solid #000;
+		border: 2px solid var(--primaryHover);
+		border-radius: 1.875rem;
+		overflow: hidden;
+		isolation: isolate;
 
 		// Transition Properties
-		color: #000;
+		color: var(--primaryHover);
 		transition: color 0.3s;
-		transition-delay: 0.1s;
 		text-align: center;
 
 		&:hover {
 			color: #fff;
+			background-color: var(--primaryHover);
 
 			&:before {
-				width: 100%;
+				opacity: 1;
 			}
 		}
 
@@ -180,14 +382,18 @@
 			top: 0;
 			left: 0;
 			content: "";
-			opacity: 1;
+			opacity: 0;
 			display: block;
-			background-color: #000;
+			background-color: var(--primaryHover);
 			height: 100%;
-
 			//Transition properties
-			width: 0;
-			transition: width 0.3s;
+			width: 100%;
+			transition: opacity 0.3s ease;
+		}
+
+		@media only screen and (max-width: 1023.5px) {
+    		padding: 1rem;
+    		flex-shrink: 0;
 		}
 	}
 
@@ -294,32 +500,46 @@
 /* Fonts */
 @media only screen and (min-width: 0px) {
 	// Grab your fonts to locally host from https://gwfh.mranftl.com/fonts
-	/* roboto-regular - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 400;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-	}
-
-	/* roboto-700 - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 700;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-	}
-
-	/* roboto-900 - latin */
-	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 900;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-	}
+	/* plus-jakarta-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/plus-jakarta-sans-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/plus-jakarta-sans-v12-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/plus-jakarta-sans-v12-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/plus-jakarta-sans-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/plus-jakarta-sans-v12-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 }
 
 /*-- -------------------------- -->
@@ -551,7 +771,7 @@
 			content: "";
 			width: 100%;
 			height: 100%;
-			background: #fff;
+			background: var(--navBackground);
 			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 			opacity: 1;
 			/* 12px - 24px */
@@ -611,6 +831,8 @@
 				height: 100%;
 				/* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
 				object-fit: contain;
+				border-radius: 0.5rem;
+				overflow: hidden;
 			}
 		}
 
@@ -618,7 +840,7 @@
 			width: calc(56 / 16 * 1rem);
 			height: calc(56 / 16 * 1rem);
 			margin: 0 0 0 auto;
-			background-color: #1a1a1a;
+			background-color: var(--primary);
 			border: none;
 			border-radius: calc(4 / 16 * 1rem);
 			display: flex;
@@ -691,7 +913,7 @@
 		.cs-line {
 			width: 100%;
 			height: 2px;
-			background-color: #fafbfc;
+			background-color: var(--bodyTextColorWhite);
 			border-radius: 2px;
 			position: absolute;
 			left: 50%;
@@ -731,11 +953,110 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 768px) {
-	#cs-navigation {
-		.cs-contact-group {
-			display: block;
-		}
-	}
+    #cs-navigation {
+        .cs-contact-group {
+            display: flex;
+            align-items: center;
+        }
+
+                // Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
+        .cs-button-solid {
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            background-color: var(--primary);
+            width: auto;
+            padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1em);
+            font-weight: bold;
+            border-radius: calc(16 / 16 * 1rem);
+            overflow: hidden;
+
+            // Transition Properties
+            color: var(--bodyTextColorWhite);
+            transition: color 0.3s;
+            transition-delay: 0.1s;
+            text-align: center;
+
+            &:hover {
+                color: #fff;
+
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 1;
+                display: block;
+                background-color: var(--primaryDark);
+                height: 100%;
+
+                //Transition properties
+                width: 0;
+                transition: opacity 0.3s;
+            }
+        }
+
+        .cs-button-outline {
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            width: auto;
+            padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1em);
+            font-weight: bold;
+            border: 2px solid var(--primaryHover);
+            border-radius: 1.875rem;
+            overflow: hidden;
+            isolation: isolate;
+
+            // Transition Properties
+            color: var(--primaryHover);
+            transition: color 0.3s;
+            text-align: center;
+
+            &:hover {
+                color: #fff;
+                background-color: var(--primaryHover);
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 0;
+                display: block;
+                background-color: var(--primaryHover);
+                height: 100%;
+                //Transition properties
+                width: 100%;
+                transition: opacity 0.3s ease;
+            }
+
+            @media only screen and (max-width: 1023.5px) {
+                padding: 1rem;
+                flex-shrink: 0;
+            }
+        }
+    }
 }
 
 /* Dark Mode */
@@ -790,7 +1111,7 @@
 			width: 100%;
 			height: auto;
 			padding-bottom: calc(48 / 20 * 1em);
-			background-color: #fff;
+			background-color: var(--navBackground);
 			border-radius: 0 0 calc(24 / 16 * 1rem) calc(24 / 16 * 1rem);
 			position: absolute;
 			top: 85%;
@@ -873,16 +1194,26 @@
 			line-height: 1.2em;
 			text-decoration: none;
 			margin: 0;
-			color: var(--headerColor);
-			display: inline-block;
+			padding: calc(12 / 16 * 1rem) calc(24 / 16 * 1rem);
+			border-radius: 0;
+			color: var(--navLinkColor);
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
 			position: relative;
 
-			&.cs-active {
-				color: var(--primary);
+			&:hover {
+				color: var(--navLinkHoverColor);
 			}
 
-			&:hover {
-				color: var(--primary);
+			&.cs-active {
+				color: var(--bodyTextColorWhite);
+				background-color: var(--primary);
+
+				&:hover {
+					color: var(--bodyTextColorWhite);
+					background-color: var(--primaryDark);
+				}
 			}
 		}
 	}
@@ -912,7 +1243,7 @@
 		box-sizing: border-box;
 		/* 12px - 24px */
 		padding: clamp(0.75rem, 2vw, 1.5rem) 0;
-		background-color: #fff;
+		background-color: var(--navBackground);
 		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 		/* 12px - 24px */
 		border-radius: clamp(0.75rem, 2vw, 1.5rem);
@@ -936,6 +1267,7 @@
 			justify-content: space-between;
 			align-items: center;
 			gap: calc(24 / 16 * 1rem);
+			position: relative;
 		}
 
 		.cs-toggle {
@@ -960,6 +1292,8 @@
 				height: 100%;
 				/* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
 				object-fit: contain;
+				border-radius: 0.5rem;
+				overflow: hidden;
 			}
 		}
 
@@ -1031,16 +1365,20 @@
 			transition: opacity 0.3s;
 		}
 
-		.cs-ul-wrapper {
-			height: 100%;
-			display: flex;
-			align-items: center;
-			/* absolutely positioned to be dead center */
-			position: static;
-	transform: none;
-	flex: 1;
-	justify-content: center;
-		}
+
+.cs-ul-wrapper {
+    width: max-content;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex: none;
+}
+
 
 		.cs-ul {
 			width: 100%;
@@ -1050,8 +1388,7 @@
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
-			/* 20px - 36px */
-			gap: clamp(1.25rem, 2.6vw, 2.25rem);
+			gap: calc(8 / 16 * 1rem);
 		}
 
 		.cs-li {
@@ -1069,59 +1406,127 @@
 			line-height: 1.5em;
 			text-decoration: none;
 			margin: 0;
-			color: var(--headerColor);
+			color: var(--navLinkColor);
 			display: block;
 			position: relative;
 			transition: color 0.3s;
+			padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
+			border-radius: calc(8 / 16 * 1rem);
 
 			&:hover {
 				color: var(--primary);
 			}
 
+			
 			&.cs-active {
-				color: var(--primary);
-			}
-		}
+				color: var(--primaryDark);
+				background-color: transparent;
+				font-weight: 700;
 
-		.cs-button-solid {
-			font-size: calc(16 / 16 * 1rem);
-			font-weight: 700;
-			/* 46px - 56px */
-			line-height: clamp(2.875em, 5.5vw, 3.5em);
-			text-align: center;
-			text-decoration: none;
-			min-width: calc(150 / 16 * 1rem);
-			margin: 0;
-			/* prevents padding from adding to the width */
-			box-sizing: border-box;
-			padding: 0 calc(32 / 16 * 1rem);
-			color: #fff;
-			background-color: var(--primary);
-			display: inline-block;
-			position: relative;
-			z-index: 1;
-			transition: color 0.3s;
-
-			&:before {
-				content: "";
-				width: 0%;
-				height: 100%;
-				background: #fff;
-				opacity: 1;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: -1;
-				transition: width 0.3s;
-			}
-
-			&:hover {
-				color: #1a1a1a;
-				&:before {
-					width: 100%;
+				&:hover {
+					color: var(--primaryDark);
+					background-color: transparent;
 				}
 			}
 		}
+
+		        // Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
+        .cs-button-solid {
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            background-color: var(--primary);
+            width: auto;
+            padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1em);
+            font-weight: bold;
+            border-radius: calc(16 / 16 * 1rem);
+            overflow: hidden;
+
+            // Transition Properties
+            color: var(--bodyTextColorWhite);
+            transition: color 0.3s;
+            transition-delay: 0.1s;
+            text-align: center;
+
+            &:hover {
+                color: #fff;
+
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 1;
+                display: block;
+                background-color: var(--primaryDark);
+                height: 100%;
+
+                //Transition properties
+                width: 0;
+                transition: opacity 0.3s;
+            }
+        }
+
+        .cs-button-outline {
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            width: auto;
+            padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1em);
+            font-weight: bold;
+            border: 2px solid var(--primaryHover);
+            border-radius: 1.875rem;
+            overflow: hidden;
+            isolation: isolate;
+
+            // Transition Properties
+            color: var(--primaryHover);
+            transition: color 0.3s;
+            text-align: center;
+
+            &:hover {
+                color: #fff;
+                background-color: var(--primaryHover);
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 0;
+                display: block;
+                background-color: var(--primaryHover);
+                height: 100%;
+                //Transition properties
+                width: 100%;
+                transition: opacity 0.3s ease;
+            }
+
+            @media only screen and (max-width: 1023.5px) {
+                padding: 1rem;
+                flex-shrink: 0;
+            }
+        }
 	}
 }
 
@@ -1166,227 +1571,209 @@
 	}
 }
                                 
-
-
 /*-- -------------------------- -->
-<---          Footer            -->
+<---           Footer           -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #cs-footer-840 {
         padding: var(--sectionPadding);
-        /* 30px - 50px */
         padding-bottom: clamp(1.875rem, 5vw, 3.125rem);
-        background-color: #1a1a1a;
+        background-color: var(--footerBackground);
 
         .cs-container {
             width: 100%;
-            /* reset on tablet */
             max-width: calc(550 / 16 * 1rem);
             margin: auto;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            column-gap: calc(48 / 16 * 1rem);
-            row-gap: calc(32 / 16 * 1rem);
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: calc(32 / 16 * 1rem);
+        }
+
+        .cs-logo-group,
+        .cs-right,
+        .cs-ul-wrapper,
+        .cs-contact-group {
+            width: 100%;
+            min-width: 0;
         }
 
         .cs-logo-group {
-            /* takes up all the space, lets the other ul's wrap below it */
-            width: 100%;
-            position: relative;
+            max-width: calc(400 / 16 * 1rem);
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .cs-logo {
-            width: calc(210 / 16 * 1rem);
-            height: auto;
-            margin: 0 0 calc(24 / 16 * 1rem) 0;
+            width: calc(234 / 16 * 1rem);
+            max-width: 100%;
+            margin: 0 0 calc(24 / 16 * 1rem);
+            padding: calc(12 / 16 * 1rem);
+            box-sizing: border-box;
+            background-color: none;
+            border-radius: calc(8 / 16 * 1rem);
             display: block;
-        }
-
-        .cs-text {
-            color: var(--bodyTextColorWhite);
-            opacity: .8;
-            margin: 0 0 calc(32 / 16 * 1rem);
         }
 
         .cs-logo-img {
             width: 100%;
             height: auto;
-        }
-
-        .cs-social {
-            display: inline-flex;
-            justify-content: flex-start;
-            gap: calc(12 / 16 * 1em);
-        }
-
-        .cs-social-link {
-            width: calc(32 / 16 * 1rem);
-            height: calc(32 / 16 * 1rem);
-            background-color: #484848;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-            transition:
-                transform 0.3s,
-                background-color 0.3s;
-
-            &:hover {
-                background-color: var(--primaryLight);
-                transform: translateY(calc(-3 / 16 * 1rem));
-
-                .cs-social-img {
-                    filter: grayscale(1) brightness(1000%);
-                }
-            }
-        }
-
-        .cs-social-img {
-            height: calc(12 / 16 * 1rem);
-            width: auto;
             display: block;
+        }
+
+        .cs-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.65;
+            text-align: center;
+            max-width: calc(400 / 16 * 1rem);
+            margin: 0;
+            color: var(--footerTextColor);
+        }
+
+        .cs-right {
+            max-width: calc(400 / 16 * 1rem);
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: calc(28 / 16 * 1rem);
         }
 
         .cs-header {
             font-size: calc(20 / 16 * 1rem);
-            line-height: 1.5em;
+            line-height: 1.5;
             font-weight: 700;
-            margin: 0 0 calc(20 / 16 * 1rem) 0;
-            color: var(--bodyTextColorWhite);
-            display: block;
-            position: relative;
+            text-align: center;
+            margin: 0 0 calc(16 / 16 * 1rem);
+            color: var(--footerTextColor);
         }
 
         .cs-ul {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: calc(12 / 16 * 1rem);
+            list-style: none;
         }
 
         .cs-ul-1 {
-            width: 100%;
-            max-width: calc(350 / 16 * 1rem);
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            column-gap: calc(32 / 16 * 1rem);
-
-            .cs-li {
-                width: 44%;
-            }
-        }
+			width: fit-content;
+			max-width: 100%;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			justify-items: center;
+			column-gap: calc(24 / 16 * 1rem);
+			row-gap: calc(8 / 16 * 1rem);
+		}
 
         .cs-li {
+            min-width: 0;
+            margin: 0;
+            padding: 0;
             list-style: none;
         }
 
         .cs-link {
             font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5;
+            text-align: center;
             text-decoration: none;
-            line-height: 1.5em;
-            text-align: left;
-            color: #bababa;
+            max-width: 100%;
+            padding: calc(4 / 16 * 1rem) 0;
+            color: var(--footerLinkColor);
             display: inline-flex;
             align-items: flex-start;
-            gap: calc(8 / 16 * 1rem);
+            gap: calc(10 / 16 * 1rem);
             transition: color 0.3s;
 
             &:hover {
-                color: var(--primaryLight);
+                color: var(--footerLinkHoverColor);
+                text-decoration: none;
+            }
+        }
+
+        .cs-contact-group {
+            margin-top: auto;
+        }
+
+        .cs-email {
+            line-height: 1.65;
+            padding: 0;
+
+            span {
+                min-width: 0;
+                overflow-wrap: anywhere;
             }
         }
 
         .cs-icon {
             width: calc(20 / 16 * 1rem);
-            height: auto;
-            margin-right: calc(2 / 16 * 1rem);
+            height: calc(20 / 16 * 1rem);
+            margin-top: calc(3 / 16 * 1rem);
+            object-fit: contain;
             display: block;
+            flex: none;
+            filter: brightness(0) invert(1);
         }
 
         .cs-bottom {
             text-align: center;
             width: 100%;
             max-width: calc(1280 / 16 * 1rem);
-            /* 48px - 64px */
-            margin: clamp(3rem, 7vw, 4rem) auto 0;
+            margin: clamp(3rem, 6vw, 4rem) auto 0;
             padding-top: calc(24 / 16 * 1rem);
-            border-top: 1px solid #484848;
+            border-top: 1px solid var(--cardBorder);
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: calc(12 / 16 * 1rem);
+            flex-direction: column;
+            align-items: center;
+            gap: calc(16 / 16 * 1rem);
         }
 
         .cs-credit,
-        .cs-bottom-link,
-        .cs-credit-link {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
+        .cs-credit-link,
+        .cs-bottom-link {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: 1.5;
             text-decoration: none;
-            width: auto;
-            margin: 0;
-            color: #bababa;
-            display: inline-block;
-            position: relative;
-            transition: color 0.3s;
         }
 
         .cs-credit {
-            width: 100%;
+            margin: 0;
+            color: var(--footerTextColor);
         }
 
-        .cs-credit-link {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            text-decoration: none;
-            width: auto;
-            margin: 0;
-            color: #bababa;
-            display: inline-block;
-            position: relative;
+        .cs-credit-link,
+        .cs-bottom-link {
+            color: var(--footerLinkColor);
+            transition: color 0.3s;
 
             &:hover {
-                color: var(--primary);
+                color: var(--footerLinkHoverColor);
+                text-decoration: none;
             }
         }
 
         .cs-bottom-links {
-            width: 100%;
+            min-width: 0;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            column-gap: calc(20 / 16 * 1rem);
+            row-gap: calc(4 / 16 * 1rem);
         }
 
         .cs-bottom-link {
-            display: flex;
-            align-items: center;
+            padding: calc(6 / 16 * 1rem) 0;
+            display: inline-block;
+        }
 
-            &:hover {
-                color: var(--primary);
-            }
-
-            &:last-of-type {
-                &:before {
-                    /* separator */
-                    content: "";
-                    width: 1px;
-                    height: calc(14 / 16 * 1rem);
-                    margin: 0 calc(12 / 16 * 1rem);
-                    background: currentColor;
-                    opacity: 1;
-                    display: block;
-                }
-            }
+        a:focus-visible {
+            outline: 2px solid var(--footerLinkHoverColor);
+            outline-offset: calc(4 / 16 * 1rem);
         }
     }
 }
@@ -1396,21 +1783,18 @@
     #cs-footer-840 {
         .cs-container {
             max-width: calc(1280 / 16 * 1rem);
-            /* 48px - 64px */
-            row-gap: clamp(3rem, 7vw, 4rem);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: stretch;
+            column-gap: clamp(2rem, 6vw, 5.5rem);
         }
 
         .cs-bottom {
-            justify-content: space-between;
-            flex-wrap: nowrap;
-        }
-
-        .cs-credit {
             text-align: left;
+            align-items: flex-start;
         }
 
         .cs-bottom-links {
-            justify-content: flex-end;
+            justify-content: flex-start;
         }
     }
 }
@@ -1418,39 +1802,28 @@
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #cs-footer-840 {
-        .cs-container {
-            /* pushes all flex children to the top */
-            align-items: flex-start;
-            justify-content: flex-end;
-            flex-wrap: nowrap;
-        }
-
-        .cs-logo-group {
-            width: 30%;
-            max-width: calc(400 / 16 * 1rem);
-            /* pushes everything to the right of it as far as possible in a flexbox */
-            margin-right: auto;
-        }
-
-        .cs-text {
-            width: 100%;
-        }
-
-        .cs-social {
+        .cs-bottom {
             flex-direction: row;
-            position: relative;
-            top: auto;
-            right: auto;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: calc(32 / 16 * 1rem);
+        }
+
+        .cs-credit,
+        .cs-bottom-links {
+            flex: 0 1 auto;
         }
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #cs-footer-840 {
-            background-color: rgba(0, 0, 0, .6);
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    #cs-footer-840 {
+        .cs-link,
+        .cs-credit-link,
+        .cs-bottom-link {
+            transition: none;
         }
     }
 }
-                                

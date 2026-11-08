@@ -4,13 +4,34 @@
 <html lang="en">
     <head>
         <title>{{ title }}</title>
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+        <!-- Body text and navigation: 400 -->
+        <link
+            rel="preload"
+            href="/assets/fonts/plus-jakarta-sans-v12-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        >
 
-        
+        <!-- Buttons and bold text: 700 -->
+        <link
+            rel="preload"
+            href="/assets/fonts/plus-jakarta-sans-v12-latin-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        >
+
+        <!-- Main headings: 800 -->
+        <link
+            rel="preload"
+            href="/assets/fonts/plus-jakarta-sans-v12-latin-800.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        >
+
          <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7RW82KRGZ"></script>
         <script>
@@ -50,19 +71,21 @@
         <link rel="manifest" href="/assets/favicons/site.webmanifest"/>
 
         <!-- Preloads -->
-        <!-- <link rel="preload" as="image" href="/assets/svgs/square-light.svg"> -->
+        <!-- <link rel="preload" as="image" href="/assets/svgs/square-light.svg">
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+        -->
 
         <!-- Sitewide Stylesheets and Scripts -->
-        <link rel="stylesheet" href="/assets/css/root.css?v=21">
+        <link rel="stylesheet" href="/assets/css/root.css">
         <script defer src="/assets/js/dark.js"></script>
         <script defer src="/assets/js/nav.js"></script>
 
 
         <!-- Termly Cookie Consent -->
+         <!---
         <script defer src="https://app.termly.io/resource-blocker/c1a07b39-e965-49d4-b893-f46d1bc8650f?autoBlock=on"></script>
-        
+         -->
 
       
 
@@ -72,7 +95,7 @@
     </head>
     <body>
         <!--Screen reader skip main nav-->
-        <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+        <a class="skip" aria-label="skip to main content" href="#main">Skip To Main Content</a>
 
         {% include "sections/header.html" %}
         <main id="main">

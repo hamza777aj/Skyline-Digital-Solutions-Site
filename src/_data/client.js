@@ -1,17 +1,17 @@
 module.exports = {
     name: "Skyline Digital Solutions",
-    email: "hello@skyline-digital-studio.com",
-    phoneForTel: "+16027835033", // Format for tel: links (no parentheses or dashes)
-    phoneFormatted: "+1 (602) 783-5033",
+    email: "skyline.digital.solutions777@gmail.com",
+    phoneForTel: "", // Format for tel: links (no parentheses or dashes)
+    phoneFormatted: "",
     image: "/assets/images/square-light.png",
     address: {
         lineOne: "",
         lineTwo: "",
-        city: "Glendale",
-        state: "AZ",
-        zip: "85306",
+        city: "Fresno",
+        state: "CA",
+        zip: "",
         country: "US",
-        mapLink: "https://maps.app.goo.gl/rbq19ZobU8snJ1FWA",
+        mapLink: "",
     },
     socials: {
         facebook: "https://www.facebook.com/",

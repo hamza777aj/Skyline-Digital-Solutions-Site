@@ -44,9 +44,13 @@ body {
     }
 
     #hero-1350 {
-        background:
-  radial-gradient(circle at top right, rgba(29, 142, 201, 0.4), transparent 45%),
-  linear-gradient(135deg, #CDE8FF 0%, #A9D8FF 50%, #E4F5FF 100%);
+         background: var(--heroBackground);
+
+//Original background styles that were commented out
+//   radial-gradient(circle at top right, rgba(29, 142, 201, 0.4), transparent 45%),
+//   linear-gradient(135deg, #CDE8FF 0%, #A9D8FF 50%, #E4F5FF 100%);
+
+
         /* 250px - 500px - leaving extra space for the navigation */
         padding: clamp(11.75rem, 27vw, 18.75rem) 1rem 0;
         /* 200px - 250px */
@@ -117,7 +121,7 @@ body {
             letter-spacing: 0.1em;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: calc(8 / 16 * 1rem);
+            margin-bottom: calc(16 / 16 * 1rem);
             display: block;
         }
 
@@ -141,46 +145,151 @@ body {
             /* 464px - 622px */
             max-width: clamp(29rem, 60vw, 38.785rem);
             margin: 0 0 calc(40 / 16 * 1rem) 0;
-            color: var(--bodyTextColor);
+            color: var(--heroText);
         }
 
+        //ORIGINAL BUTTON STYLES THAT WERE COMMENTED OUT
+        // .cs-button-solid {
+        //     font-size: calc(16/16 * 1rem);
+        //     /* 46px - 56px */
+        //     line-height: clamp(2.875em, 5.5vw, 3.5em);
+        //     text-decoration: none;
+        //     font-weight: 700;
+        //     text-align: center;
+        //     margin: 0;
+        //     color: var(--bodyTextColorWhite);
+        //     min-width: calc(150/16 * 1rem);
+        //     padding: 0 calc(24/16 * 1rem);
+        //     background-color: var(--primary);
+        //     border-radius: calc(16 / 16 * 1rem);
+        //     display: inline-block;
+        //     position: relative;
+        //     z-index: 1;
+        //     /* prevents padding from adding to the width */
+        //     box-sizing: border-box;
+    
+        //     &:before {
+        //         content: '';
+        //         position: absolute;
+        //         height: 100%;
+        //         width: 0%;
+        //         background: var(--primaryDark);
+        //         opacity: 1;
+        //         top: 0;
+        //         left: 0;
+        //         z-index: -1;
+        //         border-radius: calc(4/16 * 1rem);
+        //         transition: width .3s;
+        //     }
+    
+        //     &:hover {
+        //         &:before {
+        //             width: 100%;
+        //         }
+        //     }
+
+        //     &:focus-visible {
+        //         outline: 2px solid var(--primary);
+        //         outline-offset: 4px;
+        //         box-shadow: 0 0 0 2px var(--backgroundWhite);
+        //     }
+        // }
+
+        // Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
         .cs-button-solid {
-            font-size: calc(16/16 * 1rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: var(--bodyTextColorWhite);
-            min-width: calc(150/16 * 1rem);
-            padding: 0 calc(24/16 * 1rem);
-            background-color: var(--primary);
-            border-radius: calc(4/16 * 1rem);
-            display: inline-block;
-            position: relative;
             z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-    
-            &:before {
-                content: '';
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: var(--primaryDark);
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: calc(4/16 * 1rem);
-                transition: width .3s;
-            }
-    
+            position: relative;
+            display: inline-block;
+            background-color: var(--primary);
+            width: auto;
+            padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1em);
+            font-weight: bold;
+            border-radius: calc(16 / 16 * 1rem);
+            overflow: hidden;
+
+            // Transition Properties
+            color: var(--bodyTextColorWhite);
+            transition: color 0.3s;
+            transition-delay: 0.1s;
+            text-align: center;
+
             &:hover {
+                color: #fff;
+
                 &:before {
                     width: 100%;
                 }
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 1;
+                display: block;
+                background-color: var(--primaryDark);
+                height: 100%;
+
+                //Transition properties
+                width: 0;
+                transition: opacity 0.3s;
+            }
+        }
+
+        .cs-button-outline {
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            width: auto;
+            padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1em);
+            font-weight: bold;
+            border: 2px solid var(--primaryHover);
+            border-radius: 1.875rem;
+            overflow: hidden;
+            isolation: isolate;
+
+            // Transition Properties
+            color: var(--primaryHover);
+            transition: color 0.3s;
+            text-align: center;
+
+            &:hover {
+                color: #fff;
+                background-color: var(--primaryHover);
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 0;
+                display: block;
+                background-color: var(--primaryHover);
+                height: 100%;
+                //Transition properties
+                width: 100%;
+                transition: opacity 0.3s ease;
+            }
+
+            @media only screen and (max-width: 1023.5px) {
+                padding: 1rem;
+                flex-shrink: 0;
             }
         }
 
@@ -223,7 +332,7 @@ body {
                 content: "";
                 width: calc(546 / 16 * 1em);
                 height: calc(546 / 16 * 1em);
-                background: var(--primary);
+                background: var(--heroAccent);
                 opacity: 0.8;
                 border-radius: 50%;
                 display: block;
@@ -272,7 +381,7 @@ body {
                 content: "";
                 width: calc(260 / 16 * 1rem);
                 height: calc(260 / 16 * 1rem);
-                background: var(--primary);
+                background: var(--heroAccent);
                 opacity: 0.8;
                 border-radius: 50%;
                 display: block;

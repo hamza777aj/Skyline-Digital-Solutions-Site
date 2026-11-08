@@ -10,7 +10,7 @@
             calc(100 / 16 * 1rem);
         position: relative;
         z-index: 1;
-        background-color: var(--primary);
+        background: var(--heroBackground);
 
         .cs-container {
             text-align: center;
@@ -20,7 +20,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             flex-direction: column;
             gap: calc(16 / 16 * 1rem);
         }
@@ -32,7 +32,7 @@
             line-height: 1.2em;
             text-align: inherit;
             margin: 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--headerColor);
             position: relative;
         }
 
@@ -204,7 +204,7 @@
 
         .cs-container {
             width: 100%;
-            max-width: calc(700 / 16 * 1rem);
+            max-width: clamp(43.75rem, 75vw, 48rem);
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -240,7 +240,7 @@
         .cs-faq-item {
             list-style: none;
             width: 100%;
-            background-color: var(--cardbackgroundStrong);
+            background-color: var(--backgroundWhite);
             /* clips all corners of the button that overlap the rounded border */
             overflow: hidden;
             border-radius: calc(12 / 16 * 1rem);
@@ -248,8 +248,8 @@
 
             &.active {
                 .cs-button {
-                    background-color: var(--primary);
-                    color: var(--secondaryLight);
+                    background-color: var(--primaryDark);
+                    color: var(--backgroundWhite);
                     &:before {
                         background-color: var(--secondaryLight);
                         transform: rotate(315deg);
@@ -272,7 +272,7 @@
 
         .cs-button {
             font-size: calc(16 / 16 * 1rem);
-            line-height: 1.2em;
+            line-height: 1.4em;
             text-align: left;
             font-weight: bold;
             /* 16px - 20px */
@@ -328,6 +328,10 @@
             }
         }
 
+         .cs-text-black {
+            color: var(--heroText);
+        }
+
         .cs-button-text {
             width: 80%;
             display: block;
@@ -335,9 +339,9 @@
 
         .cs-item-p {
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            width: 90%;
+            font-size: 1rem;
+            line-height: 1.65em;
+            width: 100%;
             height: 0;
             margin: 0;
             /* 16px - 24px */
@@ -346,6 +350,8 @@
             color: var(--bodyTextColor);
             /* clips the text so it doesn't show up */
             overflow: hidden;
+            box-sizing: border-box;
+            overflow-wrap: anywhere;
             transition:
                 opacity 0.3s,
                 padding-bottom 0.3s;
@@ -400,7 +406,6 @@
 
 
 
-
 /*-- -------------------------- -->
 <---       Call To Action       -->
 <--- -------------------------- -*/
@@ -408,127 +413,153 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     #cta-2443 {
-        padding: calc(32 / 16 * 1rem) calc(32 / 16 * 1rem) calc(48 / 16 * 1rem);
-        background-color: #222;
-        position: relative;
-        z-index: 1;
+        padding: var(--sectionPadding);
+        background-color: var(--primaryDark);
 
         .cs-container {
             width: 100%;
-            max-width: calc(1280/16 * 1rem);
+            max-width: calc(1100 / 16 * 1rem);
             margin: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            /* 40px - 48px */
-            gap: clamp(2.5rem, 5vw, 3rem);
         }
-    
+
         .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
+            text-align: center;
             width: 100%;
             display: flex;
             flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-            gap: calc(32/16 * 1rem);
+            align-items: center;
+            gap: calc(24 / 16 * 1rem);
         }
 
         .cs-title {
-            font-size: clamp(calc(36 / 16 * 1rem), 5vw, calc(64 / 16 * 1rem));
+            font-size: var(--headerFontSize);
+            max-width: calc(600 / 16 * 1rem);
+            min-width: 0;
             margin: 0;
             color: var(--bodyTextColorWhite);
-            flex: none;
+        }
+
+        .cs-flex {
+            width: 100%;
+            max-width: calc(650 / 16 * 1rem);
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .cs-text {
-            margin-bottom: calc(16/16 * 1rem);
+            line-height: 1.5;
+            margin: 0 0 calc(32 / 16 * 1rem);
             color: var(--bodyTextColorWhite);
-            opacity: .8;
-
-            &:last-of-type {
-                margin-bottom: calc(32/16 * 1rem);
-            }
         }
-    
+
+// Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
         .cs-button-solid {
-            font-size: calc(16/16 * 1rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: calc(150/16 * 1rem);
-            padding: 0 calc(24/16 * 1rem);
-            background-color: var(--primary);
-            border-radius: calc(4/16 * 1rem);
-            display: inline-block;
-            position: relative;
             z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-    
-            &:before {
-                content: '';
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: var(--primaryDark);
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: calc(4/16 * 1rem);
-                transition: width .3s;
-            }
-    
+            position: relative;
+            display: inline-block;
+            background-color: var(--backgroundWhite);
+            width: auto;
+            padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1em);
+            font-weight: bold;
+            border-radius: calc(16 / 16 * 1rem);
+            overflow: hidden;
+
+            // Transition Properties
+            color: var(--primaryDark);
+            transition: color 0.3s;
+            transition-delay: 0.1s;
+            text-align: center;
+
             &:hover {
+                color: #fff;
+
                 &:before {
                     width: 100%;
                 }
             }
-        }
 
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-
-            img {
+            &:before {
+                z-index: -1;
                 position: absolute;
                 top: 0;
                 left: 0;
+                content: "";
+                opacity: 1;
+                display: block;
+                background-color: #000;
                 height: 100%;
+
+                //Transition properties
+                width: 0;
+                transition: opacity 0.3s;
+            }
+        }
+
+        .cs-button-outline {
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            width: auto;
+            padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: calc(16 / 16 * 1rem);
+            line-height: calc(16 / 16 * 1em);
+            font-weight: bold;
+            border: 2px solid var(--primaryHover);
+            border-radius: 1.875rem;
+            overflow: hidden;
+            isolation: isolate;
+
+            // Transition Properties
+            color: var(--primaryHover);
+            transition: color 0.3s;
+            text-align: center;
+
+            &:hover {
+                color: #fff;
+                background-color: var(--primaryHover);
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                opacity: 0;
+                display: block;
+                background-color: var(--primaryHover);
+                height: 100%;
+                //Transition properties
                 width: 100%;
-                opacity: .08;
-                /* Makes img tag act as a background image */
-                object-fit: cover;
+                transition: opacity 0.3s ease;
+            }
+
+            @media only screen and (max-width: 1023.5px) {
+                padding: 1rem;
+                flex-shrink: 0;
             }
         }
 
     }
 }
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
     #cta-2443 {
-        .cs-content {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .cs-flex {
-            max-width: calc(372/16 * 1rem);
+        .cs-button-solid:before {
+            transition: none;
         }
     }
 }
- 
