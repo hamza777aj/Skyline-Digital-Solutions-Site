@@ -857,7 +857,8 @@
 		}
 
 		.cs-contact-group {
-			display: none;
+			display: flex;
+    		align-items: center;;
 			position: relative;
 			z-index: 10;
 		}
@@ -946,7 +947,7 @@
 		}
 
 		.cs-button-solid {
-			display: none;
+			display: inline-block;
 		}
 	}
 }
