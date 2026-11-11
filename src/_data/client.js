@@ -1,6 +1,6 @@
 module.exports = {
     name: "Skyline Digital Solutions",
-    email: "skyline.digital.solutions777@gmail.com",
+    email: "hello@skyline-digital-solutions.com",
     phoneForTel: "", // Format for tel: links (no parentheses or dashes)
     phoneFormatted: "",
     image: "/assets/images/square-light.png",
