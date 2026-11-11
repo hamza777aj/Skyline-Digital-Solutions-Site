@@ -1,0 +1,35 @@
+---
+title: "Page Not Found | Skyline Digital Solutions"
+description: "The page you requested could not be found."
+permalink: "/404.html"
+eleventyExcludeFromCollections: true
+---
+
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/{{ page.fileSlug }}.css">
+
+    <!-- Any page-specific tags that belong in the <head> -->
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+<!-- ============================================ -->
+<!--                       404                   -->
+<!-- ============================================ -->
+
+<section id="not-found-2498">
+	<div class="cs-container">
+		<div class="cs-content">
+			<span class="cs-topper">404</span>
+			<h2 class="cs-title">Page <strong>Not Found</strong></h2>
+			<p class="cs-text">The page you are looking for doesn't exist or has been moved.</p>
+			<a href="/" class="cs-button-solid">Return To Home</a>
+		</div>
+	</div>
+</section>
+    <!-- If you want the page to have a "CTA", uncomment the line below -->
+    <!-- {% include 'sections/cta.html' %} -->
+{% endblock %}
