@@ -1,0 +1,51 @@
+---
+description: "Learn more about Skyline Digital Solutions and our mission to create clean, modern, high-quality websites that help businesses grow and stand out online."
+image: "https://skyline-digital-solutions.com/assets/images/rectangle-light.jpg"
+eleventyComputed:
+  title: "{{ page.fileSlug | titleCase }} | {{ client.name }} | {{ client.address.city }}, {{ client.address.state }}"
+  permalink: "/{{ page.fileSlug | slugify }}/"
+---
+
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/{{ page.fileSlug }}.css">
+
+    <!-- Any page-specific tags that belong in the <head> -->
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+
+
+<section id="thank-you" aria-labelledby="thank-you-title">
+    <div class="cs-container">
+        <span class="cs-topper">Message Received</span>
+
+        <h1 class="cs-title" id="thank-you-title">
+            Thank You for Reaching Out!
+        </h1>
+
+        <p class="cs-text">
+            Your message has been successfully submitted
+            to Skyline Digital Solutions.
+        </p>
+
+        <h2>What Happens Next?</h2>
+
+        <p class="cs-text">
+            We'll review your inquiry and contact you
+            using the information you provided to
+            discuss the next steps.
+        </p>
+
+        <a href="/" class="cs-button-solid">
+            Return to Home
+        </a>
+    </div>
+</section>
+
+    <!-- If you want the page to have a "CTA", uncomment the line below -->
+    <!-- {% include 'sections/cta.html' %} -->
+{% endblock %}

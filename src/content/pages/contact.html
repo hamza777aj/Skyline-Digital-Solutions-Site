@@ -62,23 +62,28 @@ permalink: "/contact/"
         </div>
 
         <!--Form-->
-        <form class="cs-form" id="cs-form-2061" name="Contact Form" action="https://formspree.io/f/xvkkndkv" method="post">
+        <form class="cs-form" id="cs-form-2061" name="Contact Form" method="post">
             <label class="cs-label cs-split">
-                Full Name (required)
-                <input class="cs-input" type="text" id="name-2061" name="name" placeholder="Your Full Name" autocomplete="name" maxlength="120" required>
+                First Name (required)
+                <input class="cs-input" type="text" id="first-name-2061" name="firstname" placeholder="Your First Name" autocomplete="given-name" maxlength="120" required>
+            </label>
+
+            <label class="cs-label cs-split">
+                Last Name (required)
+                <input class="cs-input" type="text" id="last-name-2061" name="lastname" placeholder="Your Last Name" autocomplete="family-name" maxlength="120" required>
             </label>
 
             <label class="cs-label cs-split">
                 Business Name (required)
-                <input class="cs-input" type="text" id="business-name-2061" name="business_name" placeholder="Your Business Name" autocomplete="organization" maxlength="150" required>
+                <input class="cs-input" type="text" id="business-name-2061" name="company" placeholder="Your Business Name" autocomplete="organization" maxlength="150" required>
             </label>
 
             <label class="cs-label cs-split">
-                Email Address (required)
+                Email (required)
                 <input class="cs-input" type="email" id="email-2061" name="email" placeholder="name@example.com" autocomplete="email" maxlength="254" required>
             </label>
 
-            <label class="cs-label cs-split">
+            <label class="cs-label">
                 Phone Number
                 <input class="cs-input" type="tel" id="phone-2061" name="phone" placeholder="(555) 123-4567" autocomplete="tel">
             </label>
@@ -90,7 +95,7 @@ permalink: "/contact/"
                     <option value="new_business_website">New Business Website</option>
                     <option value="website_redesign">Website Redesign</option>
                     <option value="custom_website_requirements">Custom Website Requirements</option>
-                    <option value="not_sure">Not Sure Yet</option>
+                    <option value="not_sure_yet">Not Sure Yet</option>
                 </select>
             </label>
 
@@ -102,39 +107,207 @@ permalink: "/contact/"
 
             <label class="cs-label cs-message">
                 <span id="description-label-2061">Tell Us About Your Project (required)</span>
-                <textarea class="cs-input cs-textarea" id="description-2061" name="description" placeholder="Briefly describe your business, website goals, and what you're looking to accomplish." rows="6" maxlength="3000" aria-labelledby="description-label-2061" aria-describedby="description-help-2061" required></textarea>
+                <textarea class="cs-input cs-textarea" id="description-2061" name="message" placeholder="Briefly describe your business, website goals, and what you're looking to accomplish." rows="6" maxlength="3000" aria-labelledby="description-label-2061" aria-describedby="description-help-2061" required></textarea>
                 <small id="description-help-2061">Describe your business, website goals, and any specific requirements.</small>
             </label>
 
             <label class="cs-label cs-split">
                 Website Plan of Interest
-                <select class="cs-input cs-select" id="plan-interest-2061" name="plan_interest">
+                <select class="cs-input cs-select" id="plan-interest-2061" name="website_plan_of_interest">
                     <option value="" selected>Select a Plan</option>
                     <option value="starter">Starter</option>
                     <option value="professional">Professional</option>
                     <option value="custom">Custom</option>
-                    <option value="not_sure">Not Sure Yet</option>
+                    <option value="not_sure_yet">Not Sure Yet</option>
                 </select>
             </label>
 
             <label class="cs-label cs-split">
                 Desired Project Timeline
-                <select class="cs-input cs-select" id="timeline-2061" name="timeline">
+                <select class="cs-input cs-select" id="timeline-2061" name="desired_project_timeline">
                     <option value="" selected>Select a Timeframe</option>
                     <option value="as_soon_as_possible">As Soon as Possible</option>
                     <option value="within_1_to_3_months">Within 1-3 Months</option>
                     <option value="within_3_to_6_months">Within 3-6 Months</option>
-                    <option value="flexible">Flexible / Not Sure</option>
+                    <option value="flexible">Flexible</option>
+                    <option value="not_sure_yet">Not Sure Yet</option>
                 </select>
             </label>
 
             <div class="cs-wrapper">
-                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+                <button class="cs-button-solid cs-submit" type="submit" disabled>Send Message</button>
             </div>
         </form>
+        <p id="cs-form-status-2061"
+           role="alert"
+           hidden>
+        </p>
     </div>
 </section>
 
+<script>
+(() => {
+    function initializeContactForm() {
+        const form = document.getElementById("cs-form-2061");
+        const status = document.getElementById("cs-form-status-2061");
+
+        if (!form || !status || form.dataset.hubspotBound === "true") {
+            return;
+        }
+
+        const button = form.querySelector('button[type="submit"]');
+
+        if (!button) return;
+
+        // Confirm these match the form you published.
+        const portalId = "247935563";
+        const formId = "00a55717-1fbb-4590-8c0f-48a36b55be73";
+
+        const endpoint =
+            `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+
+        const fieldNames = [
+            "firstname",
+            "lastname",
+            "company",
+            "email",
+            "phone",
+            "project_type",
+            "website",
+            "message",
+            "website_plan_of_interest",
+            "desired_project_timeline"
+        ];
+
+        const originalButtonText = button.textContent;
+        let submitting = false;
+
+        function restoreButton() {
+            submitting = false;
+            button.disabled = false;
+            button.textContent = originalButtonText;
+            form.removeAttribute("aria-busy");
+        }
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            if (submitting || !form.reportValidity()) return;
+
+            submitting = true;
+            button.disabled = true;
+            button.textContent = "Sending...";
+            form.setAttribute("aria-busy", "true");
+
+            status.hidden = true;
+            status.textContent = "";
+
+            const controller = new AbortController();
+
+            const timeout = setTimeout(() => {
+                controller.abort();
+            }, 20000);
+
+            let accepted = false;
+
+            let errorMessage =
+                "We couldn't confirm whether your message was received. " +
+                "Please check your connection before trying again.";
+
+            try {
+                const data = new FormData(form);
+
+                const fields = fieldNames
+                    .map((name) => ({
+                        objectTypeId: "0-1", // Contact properties.
+                        name,
+                        value: String(data.get(name) ?? "").trim()
+                    }))
+                    .filter((field) => field.value !== "");
+
+                const response = await fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    signal: controller.signal,
+                    body: JSON.stringify({
+                        fields,
+                        context: {
+                            pageUri:
+                                window.location.origin +
+                                window.location.pathname,
+                            pageName: document.title
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    errorMessage = response.status === 429
+                        ? "Too many attempts. Please try again in a few minutes."
+                        : "Your message could not be submitted. Please check your details and try again.";
+
+                    const result = await response.json().catch(() => ({}));
+
+                    // Log diagnostic codes, not the visitor's form data.
+                    console.error(
+                        "HubSpot form error",
+                        response.status,
+                        (result?.errors ?? []).map((error) =>
+                            error.errorType ||
+                            error.code ||
+                            "UNKNOWN_ERROR"
+                        )
+                    );
+
+                    throw new Error("HubSpot rejected the submission.");
+                }
+
+                accepted = true;
+
+            } catch {
+                status.textContent = errorMessage;
+                status.hidden = false;
+                status.tabIndex = -1;
+                status.focus();
+
+            } finally {
+                clearTimeout(timeout);
+                form.removeAttribute("aria-busy");
+
+                if (!accepted) {
+                    restoreButton();
+                }
+            }
+
+            if (accepted) {
+                button.textContent = "Sent";
+                window.location.assign("/thank-you/");
+            }
+        });
+
+        form.dataset.hubspotBound = "true";
+        button.disabled = false;
+
+        // Restore the button when returning with the browser's Back button.
+        window.addEventListener("pageshow", (event) => {
+            if (event.persisted) {
+                restoreButton();
+            }
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            initializeContactForm,
+            { once: true }
+        );
+    } else {
+        initializeContactForm();
+    }
+})();
+</script>
 
 <!-- ============================================ -->
 <!--                Call To Action                -->
